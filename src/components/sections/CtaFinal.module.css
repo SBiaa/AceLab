@@ -1,0 +1,31 @@
+.cta {
+  background: var(--surface-brand-gradient);
+  position: relative;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  opacity: 0.12;
+}
+
+.inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.heading {
+  color: var(--white);
+}
+
+.subhead {
+  color: var(--plum-100);
+  max-width: 460px;
+}

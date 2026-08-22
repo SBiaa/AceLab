@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Claude Design canvas source (large, kept locally for reference)
+/ace-lab-website.html
+/*.zip

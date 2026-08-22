@@ -1,0 +1,7 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1440, "h": 9000, "title": "Elegante" },
+    { "file": "Vibrante.dc.html", "x": 1560, "y": 0, "w": 1440, "h": 9500, "title": "Vibrante" }
+  ],
+  "launch": { "view": "focused", "file": "Vibrante.dc.html" }
+}

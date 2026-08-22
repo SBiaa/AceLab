@@ -1,0 +1,35 @@
+.heading {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.quote {
+  font-size: var(--text-body);
+  font-style: italic;
+  margin-bottom: var(--space-4);
+}
+
+.name {
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-strong);
+  margin: 0;
+}
+
+.role {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  margin: 2px 0 0;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

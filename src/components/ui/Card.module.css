@@ -1,0 +1,112 @@
+.card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition:
+    box-shadow var(--dur-base) var(--ease-standard),
+    transform var(--dur-base) var(--ease-standard);
+  display: flex;
+  flex-direction: column;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.paper {
+  background: var(--surface-card);
+  color: var(--text-body);
+  border: 1px solid var(--border-subtle);
+}
+.subtle {
+  background: var(--surface-subtle);
+  color: var(--text-body);
+  border: 1px solid transparent;
+}
+.brand {
+  background: var(--surface-brand);
+  color: var(--white);
+  border: 1px solid transparent;
+}
+.soft {
+  background: var(--surface-brand-soft);
+  color: var(--plum-900);
+  border: 1px solid transparent;
+}
+.ink {
+  background: var(--surface-black);
+  color: var(--white);
+  border: 1px solid transparent;
+}
+
+.gradient.brand,
+.gradient.ink {
+  background: var(--surface-brand-gradient);
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-brand);
+}
+
+.shadowNone {
+  box-shadow: var(--shadow-none);
+}
+.shadowSm {
+  box-shadow: var(--shadow-sm);
+}
+.shadowMd {
+  box-shadow: var(--shadow-md);
+}
+.shadowLg {
+  box-shadow: var(--shadow-lg);
+}
+
+.star {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  opacity: 0.9;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
+}
+
+.padSm {
+  padding: var(--space-4);
+}
+.padMd {
+  padding: var(--space-5);
+}
+.padLg {
+  padding: var(--space-6);
+}
+
+.eyebrow {
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.eyebrowInverse {
+  color: var(--plum-300);
+}
+.eyebrowInk {
+  color: var(--ink-400);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  color: var(--text-strong);
+  margin: 0;
+  letter-spacing: var(--tracking-display);
+}
+.titleInverse {
+  color: var(--white);
+}

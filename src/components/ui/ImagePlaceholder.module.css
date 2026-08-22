@@ -1,0 +1,38 @@
+.placeholder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.plum {
+  background: linear-gradient(150deg, var(--plum-900) 0%, var(--plum-600) 60%, var(--crimson-600) 130%);
+}
+
+.paper {
+  background: linear-gradient(150deg, var(--ink-100), var(--plum-100));
+}
+
+.watermark {
+  opacity: 0.18;
+}
+
+.paper .watermark {
+  opacity: 0.5;
+}
+
+.label {
+  position: absolute;
+  bottom: var(--space-3);
+  right: var(--space-4);
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.paper .label {
+  color: var(--ink-400);
+}

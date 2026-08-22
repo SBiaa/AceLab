@@ -1,0 +1,39 @@
+.grid {
+  display: grid;
+  grid-template-columns: 0.9fr 0.75fr 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.point {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.star {
+  margin-top: 6px;
+}
+
+.closing {
+  font-weight: var(--weight-semibold);
+  color: var(--text-strong);
+  margin-top: var(--space-3);
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
