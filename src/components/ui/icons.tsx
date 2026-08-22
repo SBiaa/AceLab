@@ -89,3 +89,100 @@ export function TrophyIcon(props: SVGProps<SVGSVGElement>) {
     </IconBase>
   );
 }
+
+export function HeartIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <path d="M19.5 12.6 12 20l-7.5-7.4a4.8 4.8 0 0 1 6.8-6.8L12 6.4l0.7-0.6a4.8 4.8 0 0 1 6.8 6.8Z" />
+    </IconBase>
+  );
+}
+
+export function UsersIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <circle cx="9" cy="8" r="3.2" />
+      <path d="M3 20v-1.4a4.5 4.5 0 0 1 4.5-4.5H10a4.5 4.5 0 0 1 4.5 4.5V20" />
+      <path d="M16 8.2a3 3 0 1 1 0 6" />
+      <path d="M15 14.6h1.5A4 4 0 0 1 20.5 18.6V20" />
+    </IconBase>
+  );
+}
+
+export function WavesIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <path d="M2 8c1.5-1.6 3.2-1.6 4.7 0s3.2 1.6 4.7 0 3.2-1.6 4.7 0 3.2 1.6 4.7 0" />
+      <path d="M2 14c1.5-1.6 3.2-1.6 4.7 0s3.2 1.6 4.7 0 3.2-1.6 4.7 0 3.2 1.6 4.7 0" />
+      <path d="M2 20c1.5-1.6 3.2-1.6 4.7 0s3.2 1.6 4.7 0 3.2-1.6 4.7 0 3.2 1.6 4.7 0" />
+    </IconBase>
+  );
+}
+
+export function FilmIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <rect x="3" y="4" width="18" height="16" rx="1.5" />
+      <line x1="3" y1="9" x2="21" y2="9" />
+      <line x1="3" y1="15" x2="21" y2="15" />
+      <line x1="7.5" y1="4" x2="7.5" y2="9" />
+      <line x1="16.5" y1="4" x2="16.5" y2="9" />
+      <line x1="7.5" y1="15" x2="7.5" y2="20" />
+      <line x1="16.5" y1="15" x2="16.5" y2="20" />
+    </IconBase>
+  );
+}
+
+export function MicIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <rect x="9" y="2.5" width="6" height="11" rx="3" />
+      <path d="M5 11a7 7 0 0 0 14 0" />
+      <line x1="12" y1="18" x2="12" y2="21.5" />
+      <line x1="8.5" y1="21.5" x2="15.5" y2="21.5" />
+    </IconBase>
+  );
+}
+
+export function SunIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <circle cx="12" cy="12" r="4.2" />
+      <line x1="12" y1="1.5" x2="12" y2="4" />
+      <line x1="12" y1="20" x2="12" y2="22.5" />
+      <line x1="4.2" y1="4.2" x2="6" y2="6" />
+      <line x1="18" y1="18" x2="19.8" y2="19.8" />
+      <line x1="1.5" y1="12" x2="4" y2="12" />
+      <line x1="20" y1="12" x2="22.5" y2="12" />
+      <line x1="4.2" y1="19.8" x2="6" y2="18" />
+      <line x1="18" y1="6" x2="19.8" y2="4.2" />
+    </IconBase>
+  );
+}
+
+export function ImageIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <circle cx="8.5" cy="9.5" r="1.6" />
+      <path d="M21 16.5 15.5 11 5.5 21" />
+    </IconBase>
+  );
+}
+
+export function ShirtIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <path d="M8 3 4 6.5 6.2 9.3 8 8v11.5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V8l1.8 1.3L20 6.5 16 3l-2 1.6a3 3 0 0 1-4 0Z" />
+    </IconBase>
+  );
+}
+
+export function FlagIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <line x1="5" y1="3" x2="5" y2="21" />
+      <path d="M5 4.5h11l-2.6 3.8L16 12H5" />
+    </IconBase>
+  );
+}

@@ -141,7 +141,13 @@ export const work = [
   { title: "Feed Construindo o Amanhã", category: "Social Media", slotId: "work-2" },
   { title: "Ensaio Novo Millenium", category: "Fotografia", slotId: "work-3" },
   { title: "Site institucional", category: "Web", slotId: "work-4" },
-  { title: "Manual de marca", category: "Branding", slotId: "work-5" },
+  {
+    title: "Manual de marca — Novo Millenium",
+    category: "Branding",
+    slotId: "work-5",
+    coverImage: "/images/work/novo-millenium/logo-novo-millenium.png",
+    caseStudy: "novo-millenium",
+  },
   { title: "Cobertura de evento", category: "Fotografia", slotId: "work-6" },
 ];
 

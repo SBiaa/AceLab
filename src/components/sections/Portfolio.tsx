@@ -1,12 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Badge } from "../ui/Badge";
 import { ImagePlaceholder } from "../ui/ImagePlaceholder";
+import { Lightbox } from "../ui/Lightbox";
 import { Reveal } from "../ui/Reveal";
 import { StarField } from "../ui/StarField";
 import { filterNames, work } from "@/lib/data";
+import { NovoMilleniumCase } from "./NovoMilleniumCase";
 import styles from "./Portfolio.module.css";
 
 const AMBIENT_STARS = [
@@ -16,6 +19,7 @@ const AMBIENT_STARS = [
 
 export function Portfolio() {
   const [activeFilter, setActiveFilter] = useState<(typeof filterNames)[number]>("Todos");
+  const [openCaseStudy, setOpenCaseStudy] = useState<string | null>(null);
 
   const filteredWork = activeFilter === "Todos" ? work : work.filter((w) => w.category === activeFilter);
 
@@ -55,8 +59,21 @@ export function Portfolio() {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3, ease: [0.2, 0.6, 0.2, 1] }}
                 className={styles.item}
+                onClick={w.caseStudy ? () => setOpenCaseStudy(w.caseStudy!) : undefined}
+                style={w.caseStudy ? { cursor: "pointer" } : undefined}
               >
-                <ImagePlaceholder label="Peça do portfólio" className={styles.itemImage} />
+                {w.coverImage ? (
+                  <Image
+                    src={w.coverImage}
+                    alt={w.title}
+                    fill
+                    sizes="(max-width: 860px) 100vw, 33vw"
+                    className={styles.itemImage}
+                    style={{ objectFit: "contain", background: "linear-gradient(135deg, #0b1620 0%, #0f3245 45%, #136f83 100%)" }}
+                  />
+                ) : (
+                  <ImagePlaceholder label="Peça do portfólio" className={styles.itemImage} />
+                )}
                 <div className={styles.overlay}>
                   <p className={styles.itemTitle}>{w.title}</p>
                   <p className={styles.itemCategory}>{w.category}</p>
@@ -66,6 +83,12 @@ export function Portfolio() {
           </AnimatePresence>
         </motion.div>
       </div>
+
+      {openCaseStudy === "novo-millenium" && (
+        <Lightbox onClose={() => setOpenCaseStudy(null)}>
+          <NovoMilleniumCase />
+        </Lightbox>
+      )}
     </div>
   );
 }

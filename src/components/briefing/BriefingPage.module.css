@@ -1,0 +1,453 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--gutter);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+}
+
+.backLink:hover {
+  color: var(--text-accent);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  margin: 0 var(--gutter) var(--space-9);
+  padding: clamp(48px, 8vw, 96px) clamp(24px, 6vw, 80px);
+  color: var(--white);
+}
+
+.heroEyebrow {
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffc861;
+  margin: 0 0 var(--space-4);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 8vw, 96px);
+  line-height: 1.02;
+  margin: 0;
+  color: var(--white);
+}
+
+.heroTagline {
+  font-size: clamp(16px, 2vw, 20px);
+  color: rgba(244, 250, 249, 0.78);
+  max-width: 60ch;
+  margin: var(--space-5) 0 0;
+  line-height: 1.6;
+}
+
+.heroMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-top: var(--space-9);
+}
+
+.heroMetaLabel {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffc861;
+  margin-bottom: 8px;
+}
+
+.heroMetaValue {
+  font-size: var(--text-body-sm);
+  color: rgba(244, 250, 249, 0.78);
+  line-height: 1.5;
+}
+
+/* Section shell */
+.section {
+  padding: var(--space-8) var(--gutter);
+}
+
+.sectionInner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-h2);
+  color: var(--text-strong);
+  margin: 0 0 var(--space-6);
+}
+
+.sectionLead {
+  font-size: var(--text-body-lg);
+  color: var(--text-body);
+  line-height: 1.6;
+  max-width: 68ch;
+  margin: -20px 0 var(--space-6);
+}
+
+/* Sobre */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-8);
+}
+
+.aboutBlock + .aboutBlock {
+  margin-top: var(--space-6);
+}
+
+.aboutLabel {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-accent);
+  margin-bottom: var(--space-2);
+}
+
+.aboutText {
+  font-size: var(--text-body-lg);
+  color: var(--text-body);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.voicePills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.voicePill {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  padding: 12px 22px;
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+/* Logotipo */
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.logoCard {
+  border-radius: var(--radius-lg);
+  padding: var(--space-7) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.logoCardLight {
+  background: var(--surface-card, var(--white));
+}
+
+.logoCardDark {
+  background: var(--ink-900);
+}
+
+.logoCardImg {
+  height: auto;
+  max-width: 100%;
+}
+
+.logoCardTitle {
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+}
+
+.logoCardTitleLight {
+  color: var(--text-strong);
+}
+
+.logoCardTitleDark {
+  color: var(--white);
+}
+
+.logoCardNote {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.logoCardNoteDark {
+  color: rgba(244, 250, 249, 0.65);
+}
+
+.protectionBox {
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+}
+
+/* Cores */
+.paletteGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-5);
+}
+
+.swatch {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.swatchColor {
+  height: 88px;
+}
+
+.swatchBody {
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface-card, var(--white));
+}
+
+.swatchName {
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  color: var(--text-strong);
+  margin: 0;
+}
+
+.swatchNote {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 2px 0 0;
+}
+
+/* Tipografia */
+.typeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-7);
+}
+
+.typeLabel {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-accent);
+  margin-bottom: var(--space-2);
+}
+
+.typeSample {
+  color: var(--text-strong);
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.1;
+}
+
+.typeNote {
+  font-size: var(--text-body-sm);
+  color: var(--text-muted);
+  margin-top: var(--space-3);
+}
+
+/* Icones */
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: var(--space-4);
+}
+
+.iconCard {
+  background: var(--surface-card, var(--white));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.iconCardLabel {
+  font-size: var(--text-body-sm);
+  color: var(--text-body);
+}
+
+/* Padrao grafico */
+.patternGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+.patternBlock {
+  height: 220px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Submarcas */
+.subBrandGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+.subBrandCard {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.subBrandLogoWrap {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 180px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  box-shadow: var(--shadow-md);
+}
+
+.subBrandLogoInner {
+  background: var(--surface-card, var(--white));
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subBrandLogoImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.subBrandTag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.subBrandName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-h3);
+  color: var(--text-strong);
+  margin: 0 0 var(--space-3);
+}
+
+.subBrandDesc {
+  font-size: var(--text-body-sm);
+  color: var(--text-body);
+  line-height: 1.6;
+  margin: 0 0 var(--space-4);
+}
+
+.subBrandColorRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subBrandDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  flex: none;
+}
+
+.subBrandColorNote {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Aplicacoes */
+.appGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-5);
+}
+
+.appLabel {
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  color: var(--text-strong);
+  margin-top: var(--space-3);
+  text-align: center;
+}
+
+/* Closing */
+.closing {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  margin: 0 var(--gutter) var(--space-9);
+  padding: clamp(48px, 8vw, 96px) clamp(24px, 6vw, 80px);
+  color: var(--white);
+  text-align: center;
+}
+
+.closingTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(36px, 6vw, 64px);
+  margin: 0;
+  color: var(--white);
+}
+
+.closingMessage {
+  font-size: var(--text-body-lg);
+  color: rgba(244, 250, 249, 0.78);
+  max-width: 52ch;
+  margin: var(--space-4) auto 0;
+}
+
+.closingContact {
+  margin-top: var(--space-6);
+  font-size: var(--text-body-sm);
+  color: rgba(244, 250, 249, 0.9);
+}
+
+@media (max-width: 900px) {
+  .aboutGrid,
+  .logoGrid,
+  .patternGrid,
+  .subBrandGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .subBrandCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .subBrandColorRow {
+    justify-content: center;
+  }
+}
