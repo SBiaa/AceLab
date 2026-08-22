@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Logo } from "../ui/Logo";
 import { Button } from "../ui/Button";
 import { Reveal } from "../ui/Reveal";
@@ -9,18 +8,6 @@ import styles from "./Hero.module.css";
 export function Hero() {
   return (
     <HeroParallax className={`${styles.hero} grain`}>
-      <div className={styles.arrowWrap}>
-        <Reveal delay={0.35}>
-          <Image
-            src="/images/growth-arrow.png"
-            alt=""
-            width={1400}
-            height={1400}
-            className={styles.arrow}
-            priority
-          />
-        </Reveal>
-      </div>
       <div className={`container section ${styles.inner}`}>
         <Reveal>
           <Logo height={32} invert />
