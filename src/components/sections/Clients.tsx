@@ -4,7 +4,7 @@ import styles from "./Clients.module.css";
 
 export function Clients() {
   return (
-    <div className="section container">
+    <div className={`section container ${styles.wrap}`}>
       <Reveal>
         <p className="eyebrow" style={{ textAlign: "center" }}>
           clientes

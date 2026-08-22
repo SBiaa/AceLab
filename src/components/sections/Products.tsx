@@ -36,10 +36,10 @@ export function Products() {
             <Badge tone="crimson" star className={styles.badge}>
               Em desenvolvimento
             </Badge>
-            <p className={styles.name}>[Nome do sistema]</p>
+            <p className={styles.name}>Endy</p>
             <p className={styles.desc}>
-              Sistema de gestão para prestadores de serviço. Ordens de serviço, agenda, clientes e
-              histórico em um lugar só.
+              Agenda escolar para creches e escolas infantis. Rotina do dia, atividades, fotos e
+              avisos em um painel só — a família acompanha tudo em tempo real.
             </p>
             <Button variant="secondary">Quero ser avisado no lançamento</Button>
           </Card>

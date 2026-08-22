@@ -1,3 +1,9 @@
+.wrap {
+  /* Products above has a negative bottom margin (for its diagonal-cut
+     edge) that eats into this section's own top padding — add it back. */
+  margin-top: var(--space-9);
+}
+
 .heading {
   text-align: center;
 }
