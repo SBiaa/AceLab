@@ -1,15 +1,13 @@
 import { Logo } from "../ui/Logo";
-import { Star } from "../ui/Star";
 import { Button } from "../ui/Button";
 import { Reveal } from "../ui/Reveal";
 import { whatsappLink } from "@/lib/data";
+import { HeroParallax } from "./HeroParallax";
 import styles from "./Hero.module.css";
 
 export function Hero() {
   return (
-    <div className={styles.hero}>
-      <Star size={220} color="white" className={styles.starTopRight} />
-      <Star size={220} color="white" className={styles.starBottomLeft} />
+    <HeroParallax className={`${styles.hero} grain`}>
       <div className={`container section ${styles.inner}`}>
         <Reveal>
           <Logo height={32} invert />
@@ -31,6 +29,6 @@ export function Hero() {
           </Button>
         </Reveal>
       </div>
-    </div>
+    </HeroParallax>
   );
 }

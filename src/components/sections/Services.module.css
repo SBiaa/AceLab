@@ -1,35 +1,111 @@
+.wrap {
+  background: var(--ink-900);
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
 .heading {
   font-size: var(--text-h1);
   text-align: center;
   margin-bottom: var(--space-8);
+  color: var(--white);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-5);
+  align-items: stretch;
+}
+
+.item {
+  height: 100%;
+}
+
+/* Doubled selector to out-specificity Card's own module rules regardless of
+   CSS chunk load order, since this class lands on the same element. */
+.card.card {
+  border-color: transparent;
+  box-shadow: var(--shadow-lg);
+}
+
+.card.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.iconBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  flex: none;
+  border-radius: var(--radius-md);
+  background: var(--crimson-100);
+  color: var(--crimson-700);
+}
+
+.eyebrow {
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 2px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  color: var(--text-strong);
+  margin: 0;
+  letter-spacing: var(--tracking-display);
 }
 
 .desc {
   font-size: var(--text-body-sm);
-  margin-bottom: var(--space-4);
+  margin: 0;
+  max-width: 46ch;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2) var(--space-4);
 }
 
 .itemRow {
   display: flex;
   gap: var(--space-2);
   align-items: flex-start;
-  margin-bottom: var(--space-2);
 }
 
 .itemStar {
   margin-top: 5px;
+  flex: none;
 }
 
 .itemText {
   font-size: var(--text-body-sm);
   color: var(--text-body);
   margin: 0;
+}
+
+@media (max-width: 520px) {
+  .items {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 860px) {

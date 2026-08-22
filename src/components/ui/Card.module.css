@@ -1,10 +1,12 @@
 .card {
   position: relative;
+  height: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition:
     box-shadow var(--dur-base) var(--ease-standard),
-    transform var(--dur-base) var(--ease-standard);
+    transform var(--dur-base) var(--ease-standard),
+    border-color var(--dur-base) var(--ease-standard);
   display: flex;
   flex-direction: column;
 }
@@ -43,10 +45,16 @@
   border: 1px solid transparent;
 }
 
-.gradient.brand,
-.gradient.ink {
+.gradient.brand {
   background: var(--surface-brand-gradient);
   border: 1px solid transparent;
+  box-shadow: var(--shadow-brand);
+}
+
+/* Pure black stays solid ink-900 even when "gradient" — the darkest, most
+   premium tier reads as distinct from the plum-to-ink brand gradient. */
+.gradient.ink {
+  border: 1px solid rgba(172, 30, 42, 0.35);
   box-shadow: var(--shadow-brand);
 }
 

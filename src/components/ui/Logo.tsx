@@ -15,8 +15,6 @@ export function Logo({ height = 32, invert = false, className }: LogoProps) {
       width={Math.round(height * (388 / 240))}
       className={className}
       style={{
-        height,
-        width: "auto",
         display: "block",
         filter: invert ? "brightness(0) invert(1)" : undefined,
       }}

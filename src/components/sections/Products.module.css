@@ -3,6 +3,8 @@
   margin: calc(var(--space-9) * -1) 0;
   padding-top: calc(var(--space-9) + 44px);
   padding-bottom: calc(var(--space-9) + 44px);
+  position: relative;
+  overflow: hidden;
 }
 
 .grid {
@@ -10,6 +12,8 @@
   grid-template-columns: 0.9fr 1.1fr;
   gap: var(--space-8);
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .heading {

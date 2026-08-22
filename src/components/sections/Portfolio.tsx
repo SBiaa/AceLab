@@ -5,8 +5,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Badge } from "../ui/Badge";
 import { ImagePlaceholder } from "../ui/ImagePlaceholder";
 import { Reveal } from "../ui/Reveal";
+import { StarField } from "../ui/StarField";
 import { filterNames, work } from "@/lib/data";
 import styles from "./Portfolio.module.css";
+
+const AMBIENT_STARS = [
+  { size: 12, top: "8%", left: "10%", opacity: 0.22, duration: 10, driftX: 8, driftY: -8 },
+  { size: 16, bottom: "12%", right: "10%", opacity: 0.2, duration: 12.5, delay: 1.6, driftX: -8, driftY: 8 },
+];
 
 export function Portfolio() {
   const [activeFilter, setActiveFilter] = useState<(typeof filterNames)[number]>("Todos");
@@ -14,10 +20,11 @@ export function Portfolio() {
   const filteredWork = activeFilter === "Todos" ? work : work.filter((w) => w.category === activeFilter);
 
   return (
-    <div className={`section ${styles.wrap}`}>
-      <div className="container">
+    <div className={`section grain ${styles.wrap}`}>
+      <StarField stars={AMBIENT_STARS} />
+      <div className={`container ${styles.content}`}>
         <Reveal>
-          <p className="eyebrow" style={{ textAlign: "center" }}>
+          <p className="eyebrow" style={{ textAlign: "center", color: "var(--crimson-300)" }}>
             portfólio
           </p>
           <h2 className={`h-display ${styles.heading}`} style={{ fontSize: "var(--text-h1)" }}>
@@ -29,7 +36,7 @@ export function Portfolio() {
           <div className={styles.filters}>
             {filterNames.map((name) => (
               <div key={name} onClick={() => setActiveFilter(name)}>
-                <Badge tone={name === activeFilter ? "solid" : "outline"} size="md">
+                <Badge tone={name === activeFilter ? "solid" : "outlineLight"} size="md">
                   {name}
                 </Badge>
               </div>

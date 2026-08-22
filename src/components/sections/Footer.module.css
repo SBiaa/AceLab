@@ -1,5 +1,12 @@
 .footer {
   background: var(--ink-900);
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
 }
 
 .row {

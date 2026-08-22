@@ -1,23 +1,6 @@
 .hero {
-  position: relative;
   overflow: hidden;
   background: var(--surface-brand-gradient);
-}
-
-.starTopRight {
-  position: absolute;
-  right: -40px;
-  top: -60px;
-  opacity: 0.1;
-  pointer-events: none;
-}
-
-.starBottomLeft {
-  position: absolute;
-  left: -30px;
-  bottom: -80px;
-  opacity: 0.1;
-  pointer-events: none;
 }
 
 .inner {

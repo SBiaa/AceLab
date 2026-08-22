@@ -9,6 +9,7 @@ type BadgeTone =
   | "solid"
   | "black"
   | "outline"
+  | "outlineLight"
   | "success"
   | "warning";
 

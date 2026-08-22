@@ -1,0 +1,14 @@
+.field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  animation-name: star-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
