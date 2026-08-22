@@ -43,3 +43,10 @@ next-env.d.ts
 # Claude Design canvas source (large, kept locally for reference)
 /ace-lab-website.html
 /*.zip
+
+# Raw assets dropped at the project root for processing (large source
+# files before background removal / optimization) — kept locally only.
+/*.jpg
+/*.jpeg
+/*.png
+/*.mp4

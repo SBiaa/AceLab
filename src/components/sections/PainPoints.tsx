@@ -1,5 +1,5 @@
 import { Star } from "../ui/Star";
-import { ImagePlaceholder } from "../ui/ImagePlaceholder";
+import { LoopVideo } from "../ui/LoopVideo";
 import { Reveal } from "../ui/Reveal";
 import { painPoints } from "@/lib/data";
 import styles from "./PainPoints.module.css";
@@ -17,7 +17,7 @@ export function PainPoints() {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <ImagePlaceholder label="Foto ou ilustração do negócio" className={styles.image} />
+          <LoopVideo src="/videos/floating-icons-loop.mp4" className={styles.image} />
         </Reveal>
         <Reveal delay={0.2}>
           <div className={styles.list}>
