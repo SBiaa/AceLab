@@ -50,3 +50,6 @@ next-env.d.ts
 /*.jpeg
 /*.png
 /*.mp4
+
+.vercel
+.env*

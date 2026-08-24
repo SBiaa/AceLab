@@ -1,0 +1,40 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--cd-font-body);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  padding: 7px 15px;
+  border-radius: var(--cd-radius-pill);
+}
+
+.primary {
+  background: var(--cd-orange-100);
+  color: var(--cd-orange-700);
+}
+.secondary {
+  background: var(--cd-indigo-100);
+  color: var(--cd-indigo-700);
+}
+.success {
+  background: var(--cd-teal-100);
+  color: var(--cd-teal-700);
+}
+.warning {
+  background: var(--cd-yellow-100);
+  color: var(--cd-yellow-700);
+}
+.neutral {
+  background: var(--cd-ink-100);
+  color: var(--cd-ink-700);
+}
+.onBrand {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.star {
+  flex: none;
+}

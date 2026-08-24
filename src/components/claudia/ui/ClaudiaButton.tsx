@@ -1,25 +1,24 @@
 import Link from "next/link";
 import type { ReactNode, MouseEventHandler } from "react";
-import styles from "./Button.module.css";
+import styles from "./ClaudiaButton.module.css";
 
-type ButtonVariant = "primary" | "accent" | "black" | "secondary" | "ghost" | "inverse";
-type ButtonSize = "sm" | "md" | "lg";
+type ClaudiaButtonVariant = "primary" | "secondary" | "ghost" | "inverse";
+type ClaudiaButtonSize = "sm" | "md" | "lg";
 
-type ButtonProps = {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
+type ClaudiaButtonProps = {
+  variant?: ClaudiaButtonVariant;
+  size?: ClaudiaButtonSize;
   type?: "button" | "submit";
   disabled?: boolean;
   fullWidth?: boolean;
   href?: string;
   onClick?: MouseEventHandler;
-  iconLeft?: ReactNode;
-  iconRight?: ReactNode;
+  icon?: ReactNode;
   children: ReactNode;
   className?: string;
 };
 
-export function Button({
+export function ClaudiaButton({
   variant = "primary",
   size = "md",
   type = "button",
@@ -27,11 +26,10 @@ export function Button({
   fullWidth = false,
   href,
   onClick,
-  iconLeft,
-  iconRight,
+  icon,
   children,
   className,
-}: ButtonProps) {
+}: ClaudiaButtonProps) {
   const classes = [
     styles.button,
     styles[variant],
@@ -51,18 +49,16 @@ export function Button({
         target={isExternal ? "_blank" : undefined}
         rel={isExternal ? "noopener noreferrer" : undefined}
       >
-        {iconLeft}
+        {icon}
         {children}
-        {iconRight}
       </Link>
     );
   }
 
   return (
     <button type={type} className={classes} disabled={disabled} onClick={onClick}>
-      {iconLeft}
+      {icon}
       {children}
-      {iconRight}
     </button>
   );
 }

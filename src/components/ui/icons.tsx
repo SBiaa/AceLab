@@ -186,3 +186,25 @@ export function FlagIcon(props: SVGProps<SVGSVGElement>) {
     </IconBase>
   );
 }
+
+export function SparkleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M12 2c.6 3.6 1.9 4.9 5.5 5.5-3.6.6-4.9 1.9-5.5 5.5-.6-3.6-1.9-4.9-5.5-5.5C10.1 6.9 11.4 5.6 12 2Z" />
+      <path d="M19 14c.35 2 .95 2.6 2.9 2.9-1.95.3-2.55.9-2.9 2.9-.35-2-.95-2.6-2.9-2.9 1.95-.3 2.55-.9 2.9-2.9Z" />
+    </svg>
+  );
+}
+
+export function CatIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <path d="M6 4 4.5 9.5" />
+      <path d="M18 4l1.5 5.5" />
+      <path d="M5.5 10.5a6.5 6.5 0 0 1 13 0v3.8a6.5 6.5 0 0 1-13 0Z" />
+      <path d="M9.3 14.2c.7.6 1.7.6 2.7.6s2-.1 2.7-.6" />
+      <circle cx="9.3" cy="12.3" r="0.4" fill="currentColor" />
+      <circle cx="14.7" cy="12.3" r="0.4" fill="currentColor" />
+    </IconBase>
+  );
+}

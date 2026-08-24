@@ -31,19 +31,36 @@ export function Products() {
             </p>
           </div>
         </Reveal>
-        <Reveal delay={0.15}>
-          <Card tone="paper" padding="lg">
-            <Badge tone="crimson" star className={styles.badge}>
-              Em desenvolvimento
-            </Badge>
-            <p className={styles.name}>Endy</p>
-            <p className={styles.desc}>
-              Agenda escolar para creches e escolas infantis. Rotina do dia, atividades, fotos e
-              avisos em um painel só — a família acompanha tudo em tempo real.
-            </p>
-            <Button variant="secondary">Quero ser avisado no lançamento</Button>
-          </Card>
-        </Reveal>
+        <div className={styles.cards}>
+          <Reveal delay={0.1}>
+            <Card tone="paper" padding="lg">
+              <Badge tone="crimson" star className={styles.badge}>
+                Novo
+              </Badge>
+              <p className={styles.name}>Claudia</p>
+              <p className={styles.desc}>
+                Plano de aula da semana pronto em minutos, sem IA paga — feita sob medida pra
+                professoras da rede municipal de São Paulo, com tema de gatinho incluso.
+              </p>
+              <Button variant="accent" href="/claudia">
+                Conhecer a Claudia
+              </Button>
+            </Card>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <Card tone="paper" padding="lg">
+              <Badge tone="crimson" star className={styles.badge}>
+                Em desenvolvimento
+              </Badge>
+              <p className={styles.name}>Endy</p>
+              <p className={styles.desc}>
+                Agenda escolar para creches e escolas infantis. Rotina do dia, atividades, fotos e
+                avisos em um painel só — a família acompanha tudo em tempo real.
+              </p>
+              <Button variant="secondary">Quero ser avisado no lançamento</Button>
+            </Card>
+          </Reveal>
+        </div>
       </div>
     </div>
   );

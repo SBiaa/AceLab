@@ -1,0 +1,86 @@
+/* Claudia brand tokens — scoped to .claudiaRoot so they never leak into the
+   rest of the Ace Lab site, which has its own (unrelated) token names. */
+.claudiaRoot {
+  --cd-orange-100: #ffe9cc;
+  --cd-orange-200: #ffc98a;
+  --cd-orange-300: #ffad52;
+  --cd-orange-500: #f7941d;
+  --cd-orange-600: #e37d0a;
+  --cd-orange-700: #b85f00;
+  --cd-yellow-100: #fff6d9;
+  --cd-yellow-200: #ffe896;
+  --cd-yellow-500: #ffd23f;
+  --cd-yellow-600: #e8b800;
+  --cd-yellow-700: #b88e00;
+  --cd-indigo-100: #e4e1fa;
+  --cd-indigo-200: #b9b0ee;
+  --cd-indigo-300: #8c82db;
+  --cd-indigo-500: #5b4fc7;
+  --cd-indigo-600: #453aa0;
+  --cd-indigo-700: #332c77;
+  --cd-teal-100: #d9f5ef;
+  --cd-teal-200: #8fe3d3;
+  --cd-teal-500: #2fb6a6;
+  --cd-teal-600: #1f8f82;
+  --cd-teal-700: #146b62;
+  --cd-ink-900: #221b12;
+  --cd-ink-700: #4a4038;
+  --cd-ink-500: #7a6f63;
+  --cd-ink-300: #b6ac9f;
+  --cd-ink-100: #e8e2d8;
+  --cd-paper-0: #ffffff;
+  --cd-paper-50: #fffbf3;
+  --cd-paper-100: #fbf3e4;
+
+  --cd-brand-primary: var(--cd-orange-500);
+  --cd-brand-primary-hover: var(--cd-orange-600);
+  --cd-brand-primary-press: var(--cd-orange-700);
+  --cd-brand-secondary: var(--cd-indigo-500);
+  --cd-brand-accent-warm: var(--cd-yellow-500);
+  --cd-brand-accent-cool: var(--cd-teal-500);
+
+  --cd-surface-app: var(--cd-paper-50);
+  --cd-surface-card: var(--cd-paper-0);
+  --cd-surface-sunken: var(--cd-paper-100);
+  --cd-surface-inverse: var(--cd-ink-900);
+
+  --cd-text-heading: var(--cd-ink-900);
+  --cd-text-body: var(--cd-ink-700);
+  --cd-text-muted: var(--cd-ink-500);
+  --cd-text-on-brand: #ffffff;
+
+  --cd-border-default: var(--cd-ink-100);
+  --cd-border-strong: var(--cd-ink-300);
+
+  --cd-radius-sm: 8px;
+  --cd-radius-md: 14px;
+  --cd-radius-lg: 20px;
+  --cd-radius-xl: 28px;
+  --cd-radius-pill: 999px;
+
+  --cd-shadow-sm: 0 1px 2px rgba(34, 27, 18, 0.08);
+  --cd-shadow-md: 0 4px 12px rgba(34, 27, 18, 0.1);
+  --cd-shadow-lg: 0 12px 32px rgba(34, 27, 18, 0.14);
+  --cd-shadow-brand: 0 8px 20px rgba(247, 148, 29, 0.28);
+
+  --cd-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --cd-duration-fast: 120ms;
+  --cd-duration-base: 200ms;
+
+  --cd-font-display: var(--claudia-display), "Baloo 2", ui-rounded, sans-serif;
+  --cd-font-body: var(--claudia-body), "Inter", -apple-system, sans-serif;
+
+  background: var(--cd-surface-app);
+  color: var(--cd-text-body);
+  font-family: var(--cd-font-body);
+}
+
+.claudiaRoot h1,
+.claudiaRoot h2,
+.claudiaRoot h3,
+.claudiaRoot h4 {
+  font-family: var(--cd-font-display);
+  color: var(--cd-text-heading);
+  font-weight: 800;
+  margin: 0;
+}

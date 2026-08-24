@@ -16,6 +16,12 @@
   z-index: 1;
 }
 
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
 .heading {
   font-size: var(--text-h1);
   margin-bottom: var(--space-5);
