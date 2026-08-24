@@ -16,13 +16,29 @@ export type SubBrand = {
   colorNote: string;
 };
 
+export type IconKey =
+  | "heart"
+  | "users"
+  | "waves"
+  | "film"
+  | "mic"
+  | "sun"
+  | "image"
+  | "shirt"
+  | "flag"
+  | "layers"
+  | "target"
+  | "trophy"
+  | "cat"
+  | "pen";
+
 export type BriefingIcon = {
-  icon: "heart" | "users" | "waves" | "film" | "mic" | "sun";
+  icon: IconKey;
   label: string;
 };
 
 export type ApplicationItem = {
-  icon: "image" | "shirt" | "flag";
+  icon: IconKey;
   label: string;
 };
 
@@ -54,6 +70,7 @@ export type Briefing = {
   };
   icons: BriefingIcon[];
   pattern: string;
+  subBrandsTitle?: string;
   subBrands: SubBrand[];
   applications: ApplicationItem[];
   closingMessage: string;
@@ -158,6 +175,83 @@ export const briefings: Briefing[] = [
       { icon: "flag", label: "Banner de evento" },
     ],
     closingMessage: "Toda dúvida sobre o uso da marca, fale com o time da Novo Millenium.",
+  },
+  {
+    slug: "claudia",
+    clientName: "Claudia",
+    category: "Branding",
+    eyebrow: "Manual de identidade da marca",
+    title: "Claudia",
+    tagline: "Sistema visual completo pra uma plataforma que devolve tempo pra quem dá aula.",
+    coverLogo: "/images/claudia/logo-horizontal.svg",
+    coverGradient: ["#221b12", "#b85f00", "#f7941d"],
+    accentColor: "#f7941d",
+    location: "São Paulo — SP",
+    contactEmail: "contato@acelab.com.br",
+    contactHandle: "@acelab",
+    year: "2026",
+    about:
+      "A Claudia nasceu do dia a dia de uma professora do Ensino Fundamental 1 na rede municipal de São Paulo (SME-SP). Ela resolve algo bem concreto: montar o plano de aula da semana rápido, sem gastar hora com IA paga, e já no formato que precisa ser colado no sistema oficial da prefeitura (SGP).",
+    mission:
+      "Devolver tempo pra quem ensina. Planos de aula prontos em minutos, não horas — sem jargão técnico, sem tela complicada.",
+    voiceWords: ["Prática", "Direta", "Acolhedora", "Sem jargão", "Da sala de aula"],
+    palette: [
+      { name: "Laranja 500", hex: "#F7941D", note: "marca, CTAs e destaques" },
+      { name: "Índigo 500", hex: "#5B4FC7", note: "seções alternativas e navegação" },
+      { name: "Amarelo 500", hex: "#FFD23F", note: "acento — badges e ilustrações" },
+      { name: "Teal 500", hex: "#2FB6A6", note: "acento — categorias e sucesso" },
+    ],
+    typography: {
+      displayFont: "Baloo 2",
+      displaySample: "AaBbCc 123",
+      displayNote: "Títulos e o logotipo — ecoa a rotundidade da marca original.",
+      bodyFont: "Inter",
+      bodySample: "AaBbCc 123",
+      bodyNote: "Textos e interface — alta legibilidade pro dia a dia de quem dá aula.",
+    },
+    icons: [
+      { icon: "layers", label: "Banco curado" },
+      { icon: "target", label: "Grade semanal" },
+      { icon: "trophy", label: "Cobertura curricular" },
+      { icon: "cat", label: "Tema Gatinho" },
+      { icon: "pen", label: "Edição manual" },
+      { icon: "flag", label: "Histórico de temas" },
+    ],
+    pattern:
+      "Fundos em cor sólida, sem gradientes agressivos. O único elemento decorativo é um círculo translúcido grande no canto, usado em posts, capas e no tema Gatinho — nunca em telas de produto, pra manter a interface limpa e objetiva.",
+    subBrandsTitle: "Temas visuais",
+    subBrands: [
+      {
+        tag: "Tema padrão",
+        name: "Ace",
+        description:
+          "O visual usado em todo o produto — paleta laranja e índigo, cantos bem arredondados, sombra suave. Direto ao ponto, sem distração.",
+        logo: "/images/claudia/logo-mark.svg",
+        logoWidth: 120,
+        accent: "#F7941D",
+        gradientFrom: "#FFAD52",
+        gradientTo: "#B85F00",
+        colorNote: "Cor de identidade — Laranja 500",
+      },
+      {
+        tag: "Tema alternativo",
+        name: "Gatinho",
+        description:
+          "Modo lúdico e opcional — muda a paleta e os ícones, e ganha um mascote de gato pixel-art (estilo oneko) andando pela tela. Ativa e desativa no perfil, sem afetar nenhum dado da grade.",
+        logo: "/images/claudia/logo-mark.svg",
+        logoWidth: 120,
+        accent: "#5B4FC7",
+        gradientFrom: "#8C82DB",
+        gradientTo: "#332C77",
+        colorNote: "Cor de identidade — Índigo 500",
+      },
+    ],
+    applications: [
+      { icon: "image", label: "Post pra Instagram" },
+      { icon: "image", label: "Capa de e-book" },
+      { icon: "flag", label: "Banner de lançamento" },
+    ],
+    closingMessage: "Toda dúvida sobre o uso da marca da Claudia, fale com o time da Ace Lab.",
   },
 ];
 

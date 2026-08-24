@@ -149,6 +149,13 @@ export const work = [
     caseStudy: "novo-millenium",
   },
   { title: "Cobertura de evento", category: "Fotografia", slotId: "work-6" },
+  {
+    title: "Manual de marca — Claudia",
+    category: "Branding",
+    slotId: "work-7",
+    coverImage: "/images/claudia/logo-horizontal.svg",
+    caseStudy: "claudia",
+  },
 ];
 
 export const testimonials = [

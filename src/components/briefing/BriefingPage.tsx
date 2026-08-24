@@ -7,13 +7,18 @@ import { ImagePlaceholder } from "../ui/ImagePlaceholder";
 import { Logo } from "../ui/Logo";
 import { Reveal } from "../ui/Reveal";
 import {
+  CatIcon,
   FilmIcon,
   FlagIcon,
   HeartIcon,
   ImageIcon,
+  LayersIcon,
   MicIcon,
+  PenIcon,
   ShirtIcon,
   SunIcon,
+  TargetIcon,
+  TrophyIcon,
   UsersIcon,
   WavesIcon,
 } from "../ui/icons";
@@ -29,6 +34,11 @@ const ICONS = {
   image: ImageIcon,
   shirt: ShirtIcon,
   flag: FlagIcon,
+  layers: LayersIcon,
+  target: TargetIcon,
+  trophy: TrophyIcon,
+  cat: CatIcon,
+  pen: PenIcon,
 };
 
 function SectionTitle({ children }: { children: ReactNode }) {
@@ -232,7 +242,7 @@ export function BriefingPage({ briefing }: { briefing: Briefing }) {
       <div className={styles.section}>
         <div className={styles.sectionInner}>
           <Reveal>
-            <SectionTitle>Os polos</SectionTitle>
+            <SectionTitle>{briefing.subBrandsTitle ?? "Os polos"}</SectionTitle>
           </Reveal>
           <div className={styles.subBrandGrid}>
             {briefing.subBrands.map((brand, index) => (
