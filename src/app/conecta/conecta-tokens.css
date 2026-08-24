@@ -1,0 +1,78 @@
+/* Conecta tokens — scoped to .conectaRoot so they never leak into the rest
+   of the Ace Lab site. Palette borrowed from the Novo Millenium brand manual,
+   since Conecta was built to run their operation. */
+.conectaRoot {
+  --cc-navy-900: #081119;
+  --cc-navy-700: #0f3245;
+  --cc-navy-500: #17495f;
+  --cc-teal-100: #d9f0f0;
+  --cc-teal-200: #a9dcdb;
+  --cc-teal-300: #6cc2c2;
+  --cc-teal-500: #136f83;
+  --cc-teal-600: #0f5a6a;
+  --cc-teal-700: #0b4552;
+  --cc-sol-100: #fdecc9;
+  --cc-sol-300: #f8ca6f;
+  --cc-sol-500: #f5a623;
+  --cc-sol-600: #d98c11;
+  --cc-sol-700: #a9690a;
+  --cc-ink-900: #1c2b30;
+  --cc-ink-700: #45585d;
+  --cc-ink-500: #708085;
+  --cc-ink-300: #a9b6b9;
+  --cc-ink-100: #dfe6e6;
+  --cc-paper-0: #ffffff;
+  --cc-paper-50: #fffdf8;
+  --cc-paper-100: #f7f1e4;
+
+  --cc-brand-primary: var(--cc-teal-500);
+  --cc-brand-primary-hover: var(--cc-teal-600);
+  --cc-brand-primary-press: var(--cc-teal-700);
+  --cc-brand-secondary: var(--cc-navy-700);
+  --cc-brand-accent: var(--cc-sol-500);
+
+  --cc-surface-app: var(--cc-paper-50);
+  --cc-surface-card: var(--cc-paper-0);
+  --cc-surface-sunken: var(--cc-paper-100);
+  --cc-surface-inverse: var(--cc-navy-900);
+
+  --cc-text-heading: var(--cc-navy-900);
+  --cc-text-body: var(--cc-ink-700);
+  --cc-text-muted: var(--cc-ink-500);
+  --cc-text-on-brand: #ffffff;
+
+  --cc-border-default: var(--cc-ink-100);
+  --cc-border-strong: var(--cc-ink-300);
+
+  --cc-radius-sm: 8px;
+  --cc-radius-md: 14px;
+  --cc-radius-lg: 20px;
+  --cc-radius-xl: 28px;
+  --cc-radius-pill: 999px;
+
+  --cc-shadow-sm: 0 1px 2px rgba(8, 17, 25, 0.08);
+  --cc-shadow-md: 0 4px 12px rgba(8, 17, 25, 0.1);
+  --cc-shadow-lg: 0 12px 32px rgba(8, 17, 25, 0.14);
+  --cc-shadow-brand: 0 8px 20px rgba(19, 111, 131, 0.28);
+
+  --cc-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --cc-duration-fast: 120ms;
+  --cc-duration-base: 200ms;
+
+  --cc-font-display: var(--conecta-display), "Fredoka", ui-rounded, sans-serif;
+  --cc-font-body: var(--conecta-body), "Nunito", -apple-system, sans-serif;
+
+  background: var(--cc-surface-app);
+  color: var(--cc-text-body);
+  font-family: var(--cc-font-body);
+}
+
+.conectaRoot h1,
+.conectaRoot h2,
+.conectaRoot h3,
+.conectaRoot h4 {
+  font-family: var(--cc-font-display);
+  color: var(--cc-text-heading);
+  font-weight: 700;
+  margin: 0;
+}

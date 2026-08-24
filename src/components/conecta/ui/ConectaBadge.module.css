@@ -1,0 +1,32 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--cc-font-body);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  padding: 7px 15px;
+  border-radius: var(--cc-radius-pill);
+}
+
+.primary {
+  background: var(--cc-teal-100);
+  color: var(--cc-teal-700);
+}
+.secondary {
+  background: var(--cc-sol-100);
+  color: var(--cc-sol-700);
+}
+.neutral {
+  background: var(--cc-ink-100);
+  color: var(--cc-ink-700);
+}
+.onBrand {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.star {
+  flex: none;
+}

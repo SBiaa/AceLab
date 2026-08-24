@@ -196,6 +196,37 @@ export function SparkleIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function CalendarIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <rect x="3.5" y="5" width="17" height="15.5" rx="2" />
+      <line x1="3.5" y1="9.5" x2="20.5" y2="9.5" />
+      <line x1="8" y1="2.5" x2="8" y2="6.5" />
+      <line x1="16" y1="2.5" x2="16" y2="6.5" />
+      <path d="M7.5 13.5h2.5v2.5H7.5z" fill="currentColor" stroke="none" />
+    </IconBase>
+  );
+}
+
+export function WalletIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <path d="M3.5 7.5A2 2 0 0 1 5.5 5.5h11a2 2 0 0 1 2 2V8h-13a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2" />
+      <rect x="3.5" y="8" width="17" height="11.5" rx="2" />
+      <circle cx="16.3" cy="13.7" r="1.3" fill="currentColor" stroke="none" />
+    </IconBase>
+  );
+}
+
+export function ShieldIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <IconBase {...props}>
+      <path d="M12 2.7 19.5 5.6V11c0 5-3.2 8.6-7.5 10.3C7.7 19.6 4.5 16 4.5 11V5.6Z" />
+      <polyline points="8.7 12 11 14.3 15.5 9.7" />
+    </IconBase>
+  );
+}
+
 export function CatIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <IconBase {...props}>

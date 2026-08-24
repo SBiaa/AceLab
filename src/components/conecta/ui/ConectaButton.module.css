@@ -1,0 +1,78 @@
+.button {
+  font-family: var(--cc-font-display);
+  font-weight: 600;
+  border-radius: var(--cc-radius-pill);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1;
+  transition:
+    transform var(--cc-duration-fast) var(--cc-ease),
+    box-shadow var(--cc-duration-fast) var(--cc-ease),
+    background-color var(--cc-duration-fast) var(--cc-ease);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.sm {
+  padding: 9px 18px;
+  font-size: 14px;
+}
+.md {
+  padding: 13px 24px;
+  font-size: 16px;
+}
+.lg {
+  padding: 17px 30px;
+  font-size: 18px;
+}
+
+.primary {
+  background: var(--cc-brand-primary);
+  color: var(--cc-text-on-brand);
+  box-shadow: var(--cc-shadow-brand);
+}
+.primary:hover {
+  box-shadow: 0 10px 26px rgba(19, 111, 131, 0.36);
+}
+
+.secondary {
+  background: var(--cc-brand-secondary);
+  color: var(--cc-text-on-brand);
+}
+.secondary:hover {
+  box-shadow: var(--cc-shadow-md);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--cc-brand-primary);
+  border: 2px solid var(--cc-brand-primary);
+}
+.ghost:hover {
+  background: var(--cc-teal-100);
+}
+
+.inverse {
+  background: var(--cc-paper-0);
+  color: var(--cc-brand-secondary);
+}
+.inverse:hover {
+  box-shadow: var(--cc-shadow-md);
+}

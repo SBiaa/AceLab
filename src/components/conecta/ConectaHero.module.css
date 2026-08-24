@@ -1,0 +1,127 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 253, 248, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--cc-radius-md);
+  background: var(--cc-brand-primary);
+  color: #fff;
+  font-family: var(--cc-font-display);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.brandName {
+  font-family: var(--cc-font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--cc-text-heading);
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.backLink {
+  font-family: var(--cc-font-body);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--cc-text-body);
+}
+.backLink:hover {
+  color: var(--cc-text-heading);
+}
+
+.hero {
+  padding: 64px 24px 80px;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.copy {
+  flex: 1;
+}
+
+.badge {
+  margin-bottom: 16px;
+}
+
+.headline {
+  font-size: clamp(34px, 4.4vw, 56px);
+  line-height: 1.08;
+  margin: 0 0 16px;
+}
+
+.subhead {
+  font-family: var(--cc-font-body);
+  font-size: 18px;
+  color: var(--cc-text-body);
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 0 28px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.visual {
+  flex: 1;
+  background: var(--cc-surface-card);
+  border-radius: var(--cc-radius-xl);
+  box-shadow: var(--cc-shadow-lg);
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cc-text-muted);
+  font-family: var(--cc-font-body);
+  font-size: 14px;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    flex-direction: column;
+  }
+  .subhead {
+    max-width: none;
+  }
+  .visual {
+    width: 100%;
+    height: 260px;
+  }
+  .hero {
+    padding: 40px 20px 56px;
+  }
+  .navRight {
+    gap: 12px;
+  }
+}

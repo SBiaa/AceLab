@@ -1,0 +1,113 @@
+.wrap {
+  background: var(--cc-surface-card);
+  padding: 64px 24px;
+}
+
+.grid {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.copy {
+  flex: 1;
+}
+
+.eyebrow {
+  font-family: var(--cc-font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cc-brand-primary);
+  margin: 0 0 10px;
+}
+
+.heading {
+  font-size: 32px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.paragraph {
+  font-family: var(--cc-font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--cc-text-body);
+  margin: 0 0 14px;
+}
+
+.paragraphLast {
+  margin-bottom: 0;
+}
+
+.mechCard {
+  flex: 1;
+  background: var(--cc-surface-sunken);
+  border-radius: var(--cc-radius-xl);
+  padding: 32px;
+}
+
+.mechTitle {
+  font-family: var(--cc-font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--cc-text-heading);
+  margin: 0 0 4px;
+}
+
+.mechIntro {
+  font-family: var(--cc-font-body);
+  font-size: 14px;
+  color: var(--cc-text-muted);
+  margin-bottom: 20px;
+}
+
+.mechList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mechItem {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.mechDot {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--cc-radius-pill);
+  background: var(--cc-teal-500);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--cc-font-display);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mechText {
+  font-family: var(--cc-font-body);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--cc-text-body);
+  margin: 0;
+}
+
+.mechTextStrong {
+  color: var(--cc-text-heading);
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    flex-direction: column;
+  }
+  .wrap {
+    padding: 48px 20px;
+  }
+}

@@ -50,6 +50,22 @@ export function Products() {
           <Reveal delay={0.2}>
             <Card tone="paper" padding="lg">
               <Badge tone="crimson" star className={styles.badge}>
+                Em uso
+              </Badge>
+              <p className={styles.name}>Conecta</p>
+              <p className={styles.desc}>
+                Sistema de gestão feito sob medida pra Novo Millenium: matrículas, frequência,
+                financeiro e saúde das associadas num painel só, pensado pro público da melhor
+                idade.
+              </p>
+              <Button variant="accent" href="/conecta">
+                Conhecer o Conecta
+              </Button>
+            </Card>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <Card tone="paper" padding="lg">
+              <Badge tone="crimson" star className={styles.badge}>
                 Em desenvolvimento
               </Badge>
               <p className={styles.name}>Endy</p>
