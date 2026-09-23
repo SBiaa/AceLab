@@ -9,9 +9,7 @@ export function IsadoraGallery() {
       <div className={styles.inner}>
         <Reveal>
           <h2 className={styles.heading}>Nossos momentos 📸</h2>
-          <p className={styles.intro}>
-            Por enquanto são só mockups — as fotos de verdade da aniversariante chegam em breve!
-          </p>
+          <p className={styles.intro}>Alguns momentos fofos da nossa aniversariante!</p>
         </Reveal>
 
         <RevealGroup className={styles.grid}>

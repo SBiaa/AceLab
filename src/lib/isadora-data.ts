@@ -12,15 +12,14 @@ export const isadoraEvent = {
   rsvpWhatsapp: "5511985113658" as string | null,
 };
 
-// Fotos da Isadora — troque `src` por "/images/isadora/nome-do-arquivo.jpg"
-// (coloque o arquivo em public/images/isadora/) pra substituir o mockup pela foto real.
+// Fotos da Isadora — pra trocar por outras, coloque o arquivo em
+// public/images/isadora/ e aponte `src` pra "/images/isadora/nome-do-arquivo.jpg".
 export const isadoraPhotos: { id: string; caption: string; rotate: number; src?: string }[] = [
-  { id: "foto-1", caption: "Isadora explorando a floresta", rotate: -6 },
-  { id: "foto-2", caption: "Sorriso mais doce do bosque", rotate: 4 },
-  { id: "foto-3", caption: "Nossa pequena aventureira", rotate: -3 },
-  { id: "foto-4", caption: "Cheia de travessura como a Masha", rotate: 5 },
-  { id: "foto-5", caption: "Preparando tudo com carinho", rotate: -4 },
-  { id: "foto-6", caption: "3 aninhos de muita alegria!", rotate: 3 },
+  { id: "foto-1", caption: "Beliscando um docinho", rotate: -6, src: "/images/isadora/isadora-1.jpg" },
+  { id: "foto-2", caption: "Pulando de alegria", rotate: 4, src: "/images/isadora/isadora-2.jpg" },
+  { id: "foto-3", caption: "Rindo com os amigos", rotate: -3, src: "/images/isadora/isadora-3.jpg" },
+  { id: "foto-4", caption: "No colo da mamãe", rotate: 5, src: "/images/isadora/isadora-4.jpg" },
+  { id: "foto-5", caption: "Curiosa e cheia de vida", rotate: -4, src: "/images/isadora/isadora-5.jpg" },
 ];
 
 // Tamanhos da aniversariante — preencha quando confirmar com a família.

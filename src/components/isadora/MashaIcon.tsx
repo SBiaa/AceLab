@@ -10,13 +10,16 @@ export function MashaIcon(props: SVGProps<SVGSVGElement>) {
       <ellipse cx="52" cy="116" rx="11" ry="16" fill="#f2cf7e" />
       <ellipse cx="148" cy="116" rx="11" ry="16" fill="#f2cf7e" />
 
-      {/* lenço rosa de bolinha (cobre só a testa/topo da cabeça) */}
-      <path d="M44 96 Q100 28 156 96 L150 110 Q100 84 50 110 Z" fill="#d9486b" />
-      <polygon points="148 100 170 114 149 124" fill="#d9486b" />
-      <circle cx="72" cy="72" r="5" fill="#fff" />
-      <circle cx="100" cy="58" r="5" fill="#fff" />
-      <circle cx="128" cy="72" r="5" fill="#fff" />
-      <circle cx="100" cy="86" r="4" fill="#fff" />
+      {/* lenço magenta de bolinha (cobre a testa/topo da cabeça) */}
+      <path d="M44 96 Q100 28 156 96 L150 110 Q100 84 50 110 Z" fill="#c2185b" />
+      <polygon points="148 100 172 116 149 126" fill="#c2185b" />
+      <circle cx="70" cy="70" r="6" fill="#fff" />
+      <circle cx="100" cy="55" r="6" fill="#fff" />
+      <circle cx="130" cy="70" r="6" fill="#fff" />
+      <circle cx="100" cy="84" r="5" fill="#fff" />
+
+      {/* franjinha loira, espiando por baixo do lenço */}
+      <path d="M76 94 Q100 84 124 94 L122 106 Q100 98 78 106 Z" fill="#f2cf7e" />
 
       {/* olhos */}
       <circle cx="82" cy="116" r="7" fill="#2b241a" />
