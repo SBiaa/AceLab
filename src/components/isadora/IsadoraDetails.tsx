@@ -8,8 +8,8 @@ export function IsadoraDetails() {
     <div className={styles.wrap} id="detalhes">
       <div className={styles.inner}>
         <Reveal>
-          <h2 className={styles.heading}>Ordem do dia 🪖</h2>
-          <p className={styles.intro}>Anota aí no calendário do batalhão:</p>
+          <h2 className={styles.heading}>Vem pra festa! 🌳</h2>
+          <p className={styles.intro}>Anota aí no calendário da floresta:</p>
         </Reveal>
 
         <Reveal delay={0.08}>

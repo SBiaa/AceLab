@@ -6,7 +6,7 @@ import { IsadoraFooter } from "@/components/isadora/IsadoraFooter";
 
 export const metadata: Metadata = {
   title: "Isadora vai fazer 3 aninhos! 🐻🥁",
-  description: "Convite de aniversário da Isadora — tema Marcha Soldado. 26 de dezembro de 2026, às 16h30, em Ferraz de Vasconcelos.",
+  description: "Convite de aniversário da Isadora — tema Masha e o Urso. 26 de dezembro de 2026, às 16h30, em Ferraz de Vasconcelos.",
 };
 
 export default function IsadoraPage() {

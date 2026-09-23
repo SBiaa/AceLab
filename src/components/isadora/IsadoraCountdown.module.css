@@ -13,7 +13,7 @@
   width: 72px;
   height: 72px;
   border-radius: var(--is-radius-md);
-  background: var(--is-green-900);
+  background: var(--is-forest-900);
   color: #fff;
   box-shadow: var(--is-shadow-md);
 }
@@ -29,7 +29,7 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--is-gold-300);
+  color: var(--is-pink-300);
   margin-top: 4px;
 }
 

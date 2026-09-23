@@ -5,7 +5,7 @@ export function IsadoraFooter() {
   return (
     <div className={styles.wrap}>
       <p className={styles.text}>
-        Com <span className={styles.heart}>♥</span> pela família da {isadoraEvent.name} — te esperamos na marcha!
+        Com <span className={styles.heart}>♥</span> pela família da {isadoraEvent.name} — te esperamos na floresta!
       </p>
     </div>
   );

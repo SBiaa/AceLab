@@ -1,9 +1,10 @@
 import { Reveal } from "../ui/Reveal";
-import { BearSoldierIcon } from "./BearSoldierIcon";
+import { BearIcon } from "./BearIcon";
+import { MashaIcon } from "./MashaIcon";
 import { isadoraEvent } from "@/lib/isadora-data";
 import styles from "./IsadoraHero.module.css";
 
-const buntingColors = ["#c1473a", "#e8c765", "#55703a", "#c1473a", "#e8c765", "#55703a", "#c1473a"];
+const buntingColors = ["#d9486b", "#f2879f", "#4d7d53", "#d9486b", "#f2879f", "#4d7d53", "#d9486b"];
 
 export function IsadoraHero() {
   return (
@@ -15,11 +16,14 @@ export function IsadoraHero() {
       </div>
 
       <Reveal>
-        <span className={styles.badge}>🥁 Marcha Soldado</span>
+        <span className={styles.badge}>🐻 Masha e o Urso</span>
       </Reveal>
 
       <Reveal delay={0.08}>
-        <BearSoldierIcon className={styles.mascot} />
+        <div className={styles.mascotWrap}>
+          <BearIcon className={styles.bear} />
+          <MashaIcon className={styles.masha} />
+        </div>
       </Reveal>
 
       <Reveal delay={0.16}>
@@ -30,8 +34,8 @@ export function IsadoraHero() {
 
       <Reveal delay={0.24}>
         <p className={styles.subhead}>
-          Alistamento aberto pra melhor festa do batalhão: bandeirinhas, tambor e muita fofura pra
-          celebrar esse aniversário. Vem marchar com a gente! 🎉
+          Vem pra floresta celebrar com a Masha e o Urso! Muita alegria, brincadeira e travessura
+          nesse dia tão especial. 🌲🎉
         </p>
       </Reveal>
 

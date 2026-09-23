@@ -3,7 +3,7 @@
   overflow: hidden;
   padding: 72px 24px 96px;
   text-align: center;
-  background: linear-gradient(180deg, var(--is-green-900) 0%, var(--is-green-700) 100%);
+  background: linear-gradient(180deg, var(--is-forest-900) 0%, var(--is-forest-700) 100%);
   color: var(--is-text-on-brand);
 }
 
@@ -41,21 +41,49 @@
   margin-bottom: 24px;
 }
 
-.mascot {
-  width: 140px;
-  height: 140px;
+.mascotWrap {
+  position: relative;
+  width: 190px;
+  height: 150px;
   margin: 0 auto 12px;
   filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.25));
-  animation: march 2.4s ease-in-out infinite;
 }
 
-@keyframes march {
+.bear {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 118px;
+  height: 118px;
+  animation: sway 3s ease-in-out infinite;
+}
+
+.masha {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  animation: bounce 2.2s ease-in-out infinite;
+}
+
+@keyframes sway {
   0%,
   100% {
-    transform: translateY(0) rotate(-2deg);
+    transform: rotate(-3deg);
   }
   50% {
-    transform: translateY(-8px) rotate(2deg);
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
   }
 }
 
@@ -67,7 +95,7 @@
 }
 
 .headlineAccent {
-  color: var(--is-gold-300);
+  color: var(--is-pink-400);
 }
 
 .subhead {
@@ -84,8 +112,8 @@
   gap: 8px;
   padding: 14px 28px;
   border-radius: var(--is-radius-pill);
-  background: var(--is-gold-500);
-  color: var(--is-ink-900);
+  background: var(--is-pink-500);
+  color: #fff;
   font-family: var(--is-font-display);
   font-weight: 700;
   font-size: 16px;
@@ -95,7 +123,7 @@
 }
 
 .cta:hover {
-  background: var(--is-gold-300);
+  background: var(--is-pink-400);
   transform: translateY(-2px);
 }
 

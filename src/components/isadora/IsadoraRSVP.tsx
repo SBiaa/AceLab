@@ -5,7 +5,7 @@ import { Reveal } from "../ui/Reveal";
 import { isadoraEvent } from "@/lib/isadora-data";
 import styles from "./IsadoraRSVP.module.css";
 
-const CONFETTI_COLORS = ["#c1473a", "#e8c765", "#55703a", "#fffdf6"];
+const CONFETTI_COLORS = ["#d9486b", "#f2879f", "#4d7d53", "#fffdf6"];
 
 function burstConfetti() {
   confetti({
@@ -21,7 +21,7 @@ function burstConfetti() {
 export function IsadoraRSVP() {
   const whatsappHref = isadoraEvent.rsvpWhatsapp
     ? `https://wa.me/${isadoraEvent.rsvpWhatsapp}?text=${encodeURIComponent(
-        `Oi! Confirmando presença na festa da ${isadoraEvent.name} 🎉🐻`
+        `Oi! Confirmando presença na festa da ${isadoraEvent.name} 🎉🐻👧`
       )}`
     : undefined;
 
@@ -29,9 +29,9 @@ export function IsadoraRSVP() {
     <div className={styles.wrap}>
       <div className={styles.inner}>
         <Reveal>
-          <h2 className={styles.heading}>Bateu o tambor, confirma presença! 🥁</h2>
+          <h2 className={styles.heading}>Confirma presença nessa aventura! 🐾</h2>
           <p className={styles.text}>
-            Sua confirmação ajuda a gente a organizar o batalhão. Clica aí e avisa que vem!
+            Sua confirmação ajuda a gente a preparar tudo — a Masha e o Urso já tão te esperando!
           </p>
         </Reveal>
         <Reveal delay={0.08}>

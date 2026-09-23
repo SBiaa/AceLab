@@ -1,6 +1,6 @@
 .wrap {
   padding: 64px 24px 80px;
-  background: var(--is-green-100);
+  background: var(--is-pink-100);
   text-align: center;
 }
 
@@ -28,7 +28,7 @@
   border-radius: var(--is-radius-pill);
   border: none;
   cursor: pointer;
-  background: var(--is-red-600);
+  background: var(--is-pink-600);
   color: #fff;
   font-family: var(--is-font-display);
   font-weight: 700;
@@ -39,7 +39,7 @@
 }
 
 .button:hover {
-  background: var(--is-red-500);
+  background: var(--is-pink-500);
   transform: translateY(-2px);
 }
 

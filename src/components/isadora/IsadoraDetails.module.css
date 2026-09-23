@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--is-radius-md);
-  background: var(--is-green-100);
+  background: var(--is-forest-100);
   font-size: 20px;
 }
 
@@ -85,7 +85,7 @@
   font-family: var(--is-font-display);
   font-weight: 700;
   font-size: 14px;
-  color: var(--is-green-600);
+  color: var(--is-forest-600);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-bottom: 14px;
