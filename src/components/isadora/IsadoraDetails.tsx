@@ -1,5 +1,4 @@
 import { Reveal } from "../ui/Reveal";
-import { IsadoraCountdown } from "./IsadoraCountdown";
 import { isadoraEvent } from "@/lib/isadora-data";
 import styles from "./IsadoraDetails.module.css";
 
@@ -40,11 +39,6 @@ export function IsadoraDetails() {
                 </div>
               </div>
             </div>
-
-            <div className={styles.divider} />
-
-            <p className={styles.countdownLabel}>Contagem regressiva</p>
-            <IsadoraCountdown targetISO={isadoraEvent.dateISO} />
           </div>
         </Reveal>
       </div>

@@ -13,7 +13,13 @@ function getTimeLeft(targetISO: string) {
   };
 }
 
-export function IsadoraCountdown({ targetISO }: { targetISO: string }) {
+export function IsadoraCountdown({
+  targetISO,
+  variant = "card",
+}: {
+  targetISO: string;
+  variant?: "card" | "hero";
+}) {
   // Starts null so the server-rendered (build-time) markup and the first
   // client render match; the real value arrives on the first tick below.
   const [timeLeft, setTimeLeft] = useState<ReturnType<typeof getTimeLeft> | null>(null);
@@ -32,12 +38,15 @@ export function IsadoraCountdown({ targetISO }: { targetISO: string }) {
     { label: "seg", value: timeLeft.segundos },
   ];
 
+  const unitClass = variant === "hero" ? `${styles.unit} ${styles.unitHero}` : styles.unit;
+  const labelClass = variant === "hero" ? `${styles.label} ${styles.labelHero}` : styles.label;
+
   return (
     <div className={styles.grid}>
       {units.map((unit) => (
-        <div key={unit.label} className={styles.unit}>
+        <div key={unit.label} className={unitClass}>
           <span className={styles.value}>{String(unit.value).padStart(2, "0")}</span>
-          <span className={styles.label}>{unit.label}</span>
+          <span className={labelClass}>{unit.label}</span>
         </div>
       ))}
     </div>

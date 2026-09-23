@@ -1,6 +1,7 @@
 import { Reveal } from "../ui/Reveal";
 import { BearIcon } from "./BearIcon";
 import { MashaIcon } from "./MashaIcon";
+import { IsadoraCountdown } from "./IsadoraCountdown";
 import { isadoraEvent } from "@/lib/isadora-data";
 import styles from "./IsadoraHero.module.css";
 
@@ -40,6 +41,13 @@ export function IsadoraHero() {
       </Reveal>
 
       <Reveal delay={0.32}>
+        <div className={styles.countdownWrap}>
+          <p className={styles.countdownLabel}>Faltam</p>
+          <IsadoraCountdown targetISO={isadoraEvent.dateISO} variant="hero" />
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.4}>
         <a href="#detalhes" className={styles.cta}>
           Ver data e local ↓
         </a>
