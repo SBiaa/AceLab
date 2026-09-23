@@ -5,7 +5,7 @@
 }
 
 .inner {
-  max-width: 480px;
+  max-width: 420px;
   margin: 0 auto;
 }
 
@@ -16,13 +16,80 @@
 
 .text {
   color: var(--is-text-body);
-  margin: 0 0 28px;
+  margin: 0 0 16px;
   line-height: 1.6;
+}
+
+.counter {
+  display: inline-block;
+  margin: 0 0 24px;
+  padding: 8px 16px;
+  border-radius: var(--is-radius-pill);
+  background: var(--is-surface-card);
+  box-shadow: var(--is-shadow-md);
+  font-family: var(--is-font-display);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--is-pink-600);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  background: var(--is-surface-card);
+  border-radius: var(--is-radius-xl);
+  box-shadow: var(--is-shadow-md);
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: var(--is-font-display);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--is-text-heading);
+}
+
+.optional {
+  font-weight: 500;
+  color: var(--is-text-muted);
+}
+
+.input,
+.textarea {
+  font-family: var(--is-font-body);
+  font-size: 15px;
+  padding: 10px 14px;
+  border-radius: var(--is-radius-md);
+  border: 1px solid var(--is-border-default);
+  background: var(--is-cream-50);
+  color: var(--is-text-body);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: 2px solid var(--is-pink-400);
+  outline-offset: 1px;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 64px;
+  font-family: var(--is-font-body);
 }
 
 .button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 14px 28px;
   border-radius: var(--is-radius-pill);
@@ -43,9 +110,34 @@
   transform: translateY(-2px);
 }
 
-.note {
-  margin: 16px 0 0;
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.success {
+  background: var(--is-surface-card);
+  border-radius: var(--is-radius-xl);
+  box-shadow: var(--is-shadow-md);
+  padding: 24px;
+  margin-bottom: 16px;
+  font-family: var(--is-font-display);
+  font-weight: 700;
+  color: var(--is-pink-600);
+}
+
+.error {
+  margin: 0;
+  font-size: 13px;
+  color: var(--is-pink-700);
+  font-style: italic;
+}
+
+.whatsappLink {
+  display: inline-block;
+  margin-top: 4px;
   font-size: 13px;
   color: var(--is-text-muted);
-  font-style: italic;
+  text-decoration: underline;
 }

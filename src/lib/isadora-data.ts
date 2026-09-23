@@ -1,5 +1,7 @@
 // Dados do convite da Isadora — edite aqui quando tiver endereço e contato confirmados.
 export const isadoraEvent = {
+  // Identifica esse convite nas confirmações salvas no banco (produto "Convite Moderno").
+  slug: "isadora",
   name: "Isadora",
   age: 3,
   // Data/hora do evento em horário de São Paulo. Usada na contagem regressiva.
