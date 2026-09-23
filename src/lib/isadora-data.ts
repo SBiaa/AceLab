@@ -9,8 +9,7 @@ export const isadoraEvent = {
   city: "Ferraz de Vasconcelos",
   // TODO: preencher quando o endereço do salão/local for confirmado.
   addressLabel: null as string | null,
-  // TODO: preencher com número de WhatsApp (formato 55DDDNUMERO) quando confirmado.
-  rsvpWhatsapp: null as string | null,
+  rsvpWhatsapp: "5511985113658" as string | null,
 };
 
 // Fotos da Isadora — troque `src` por "/images/isadora/nome-do-arquivo.jpg"
