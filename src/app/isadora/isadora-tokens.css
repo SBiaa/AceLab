@@ -1,0 +1,61 @@
+/* Tema "Marcha Soldado" da Isadora — escopado em .isadoraRoot pra não vazar
+   pro resto do site da Ace Lab, que tem seus próprios tokens. */
+.isadoraRoot {
+  --is-green-900: #2f3b22;
+  --is-green-700: #46592f;
+  --is-green-600: #55703a;
+  --is-green-500: #6b8047;
+  --is-green-300: #a8bb85;
+  --is-green-100: #e3ead2;
+
+  --is-red-600: #a23528;
+  --is-red-500: #c1473a;
+
+  --is-cream-0: #fffdf6;
+  --is-cream-50: #fdf8ec;
+  --is-cream-100: #f7ecd3;
+
+  --is-gold-300: #e8c765;
+  --is-gold-500: #d4a017;
+  --is-gold-700: #a67b0d;
+
+  --is-ink-900: #2b241a;
+  --is-ink-700: #55493a;
+  --is-ink-500: #83765f;
+
+  --is-surface-app: var(--is-cream-50);
+  --is-surface-card: var(--is-cream-0);
+  --is-surface-inverse: var(--is-green-900);
+
+  --is-text-heading: var(--is-ink-900);
+  --is-text-body: var(--is-ink-700);
+  --is-text-muted: var(--is-ink-500);
+  --is-text-on-brand: #ffffff;
+
+  --is-border-default: var(--is-green-100);
+
+  --is-radius-md: 16px;
+  --is-radius-lg: 24px;
+  --is-radius-xl: 32px;
+  --is-radius-pill: 999px;
+
+  --is-shadow-md: 0 8px 24px rgba(43, 36, 26, 0.12);
+  --is-shadow-lg: 0 16px 40px rgba(43, 36, 26, 0.16);
+
+  --is-font-display: var(--isadora-display), "Baloo 2", ui-rounded, sans-serif;
+  --is-font-body: var(--isadora-body), "Quicksand", -apple-system, sans-serif;
+
+  background: var(--is-surface-app);
+  color: var(--is-text-body);
+  font-family: var(--is-font-body);
+}
+
+.isadoraRoot h1,
+.isadoraRoot h2,
+.isadoraRoot h3,
+.isadoraRoot h4 {
+  font-family: var(--is-font-display);
+  color: var(--is-text-heading);
+  font-weight: 700;
+  margin: 0;
+}

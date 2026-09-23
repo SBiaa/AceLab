@@ -1,0 +1,44 @@
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--is-radius-md);
+  background: var(--is-green-900);
+  color: #fff;
+  box-shadow: var(--is-shadow-md);
+}
+
+.value {
+  font-family: var(--is-font-display);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--is-gold-300);
+  margin-top: 4px;
+}
+
+@media (max-width: 420px) {
+  .unit {
+    width: 62px;
+    height: 62px;
+  }
+  .value {
+    font-size: 21px;
+  }
+}
