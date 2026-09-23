@@ -3,7 +3,7 @@
   overflow: hidden;
   padding: 72px 24px 96px;
   text-align: center;
-  background: linear-gradient(180deg, var(--is-forest-900) 0%, var(--is-forest-700) 100%);
+  background: linear-gradient(180deg, var(--is-pink-700) 0%, var(--is-pink-500) 100%);
   color: var(--is-text-on-brand);
 }
 
@@ -95,7 +95,7 @@
 }
 
 .headlineAccent {
-  color: var(--is-pink-400);
+  color: var(--is-gold-400);
 }
 
 .subhead {
@@ -112,8 +112,8 @@
   gap: 8px;
   padding: 14px 28px;
   border-radius: var(--is-radius-pill);
-  background: var(--is-pink-500);
-  color: #fff;
+  background: var(--is-cream-0);
+  color: var(--is-pink-600);
   font-family: var(--is-font-display);
   font-weight: 700;
   font-size: 16px;
@@ -123,7 +123,7 @@
 }
 
 .cta:hover {
-  background: var(--is-pink-400);
+  background: var(--is-gold-400);
   transform: translateY(-2px);
 }
 

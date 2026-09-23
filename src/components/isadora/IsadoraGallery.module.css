@@ -45,7 +45,7 @@
   aspect-ratio: 1 / 1;
   border-radius: 4px;
   overflow: hidden;
-  background: linear-gradient(150deg, var(--is-forest-500) 0%, var(--is-pink-400) 130%);
+  background: linear-gradient(150deg, var(--is-pink-300) 0%, var(--is-pink-600) 130%);
   display: flex;
   align-items: center;
   justify-content: center;

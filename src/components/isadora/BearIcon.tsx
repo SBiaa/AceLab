@@ -26,6 +26,11 @@ export function BearIcon(props: SVGProps<SVGSVGElement>) {
 
       {/* boca */}
       <path d="M92 128 q8 8 16 0" stroke="#2b241a" strokeWidth="3" strokeLinecap="round" fill="none" />
+
+      {/* laço rosa */}
+      <polygon points="100 40 78 26 82 46" fill="#d9486b" />
+      <polygon points="100 40 122 26 118 46" fill="#d9486b" />
+      <circle cx="100" cy="40" r="7" fill="#b8355a" />
     </svg>
   );
 }

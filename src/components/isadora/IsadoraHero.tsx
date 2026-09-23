@@ -4,7 +4,7 @@ import { MashaIcon } from "./MashaIcon";
 import { isadoraEvent } from "@/lib/isadora-data";
 import styles from "./IsadoraHero.module.css";
 
-const buntingColors = ["#d9486b", "#f2879f", "#4d7d53", "#d9486b", "#f2879f", "#4d7d53", "#d9486b"];
+const buntingColors = ["#d9486b", "#f2879f", "#ffd873", "#e6607f", "#f7b9c8", "#ffd873", "#d9486b"];
 
 export function IsadoraHero() {
   return (

@@ -1,18 +1,15 @@
 /* Tema "Masha e o Urso" da Isadora — escopado em .isadoraRoot pra não vazar
    pro resto do site da Ace Lab, que tem seus próprios tokens. */
 .isadoraRoot {
-  --is-forest-900: #2f4a33;
-  --is-forest-700: #3f6b46;
-  --is-forest-600: #4d7d53;
-  --is-forest-500: #5c8a5f;
-  --is-forest-300: #9db98f;
-  --is-forest-100: #e6efdd;
-
+  --is-pink-700: #b8355a;
   --is-pink-600: #d9486b;
   --is-pink-500: #e6607f;
   --is-pink-400: #f2879f;
   --is-pink-300: #f7b9c8;
   --is-pink-100: #fbe2e8;
+  --is-pink-50: #fef2f5;
+
+  --is-gold-400: #ffd873;
 
   --is-brown-700: #6b4a2f;
   --is-brown-500: #a9744f;
@@ -28,14 +25,14 @@
 
   --is-surface-app: var(--is-cream-50);
   --is-surface-card: var(--is-cream-0);
-  --is-surface-inverse: var(--is-forest-900);
+  --is-surface-inverse: var(--is-pink-700);
 
   --is-text-heading: var(--is-ink-900);
   --is-text-body: var(--is-ink-700);
   --is-text-muted: var(--is-ink-500);
   --is-text-on-brand: #ffffff;
 
-  --is-border-default: var(--is-forest-100);
+  --is-border-default: var(--is-pink-100);
 
   --is-radius-md: 16px;
   --is-radius-lg: 24px;
