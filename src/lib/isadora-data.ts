@@ -12,3 +12,14 @@ export const isadoraEvent = {
   // TODO: preencher com número de WhatsApp (formato 55DDDNUMERO) quando confirmado.
   rsvpWhatsapp: null as string | null,
 };
+
+// Fotos da Isadora — troque `src` por "/images/isadora/nome-do-arquivo.jpg"
+// (coloque o arquivo em public/images/isadora/) pra substituir o mockup pela foto real.
+export const isadoraPhotos: { id: string; caption: string; rotate: number; src?: string }[] = [
+  { id: "foto-1", caption: "Isadora explorando a floresta", rotate: -6 },
+  { id: "foto-2", caption: "Sorriso mais doce do bosque", rotate: 4 },
+  { id: "foto-3", caption: "Nossa pequena aventureira", rotate: -3 },
+  { id: "foto-4", caption: "Cheia de travessura como a Masha", rotate: 5 },
+  { id: "foto-5", caption: "Preparando tudo com carinho", rotate: -4 },
+  { id: "foto-6", caption: "3 aninhos de muita alegria!", rotate: 3 },
+];
