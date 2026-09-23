@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IsadoraHero } from "@/components/isadora/IsadoraHero";
 import { IsadoraDetails } from "@/components/isadora/IsadoraDetails";
 import { IsadoraGallery } from "@/components/isadora/IsadoraGallery";
+import { IsadoraGifts } from "@/components/isadora/IsadoraGifts";
 import { IsadoraRSVP } from "@/components/isadora/IsadoraRSVP";
 import { IsadoraFooter } from "@/components/isadora/IsadoraFooter";
 
@@ -16,6 +17,7 @@ export default function IsadoraPage() {
       <IsadoraHero />
       <IsadoraDetails />
       <IsadoraGallery />
+      <IsadoraGifts />
       <IsadoraRSVP />
       <IsadoraFooter />
     </main>

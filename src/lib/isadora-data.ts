@@ -23,3 +23,19 @@ export const isadoraPhotos: { id: string; caption: string; rotate: number; src?:
   { id: "foto-5", caption: "Preparando tudo com carinho", rotate: -4 },
   { id: "foto-6", caption: "3 aninhos de muita alegria!", rotate: 3 },
 ];
+
+// Tamanhos da aniversariante — preencha quando confirmar com a família.
+export const isadoraSizes = {
+  shoeSize: null as string | null, // ex: "25"
+  clothingSize: null as string | null, // ex: "3 anos" ou "98cm"
+};
+
+// Ideias de presente por categoria — edite/adicione livremente.
+export const isadoraGiftIdeas: { icon: string; title: string; examples: string }[] = [
+  { icon: "👟", title: "Calçados", examples: "Tênis, sandália ou chinelo confortável" },
+  { icon: "👗", title: "Roupinhas", examples: "Conjuntos, vestidos, pijamas" },
+  { icon: "🧴", title: "Cremes e cosméticos infantis", examples: "Hidratante, shampoo, kit de banho" },
+  { icon: "🧸", title: "Brinquedos", examples: "Bonecas, blocos de montar, quebra-cabeça" },
+  { icon: "🎨", title: "Arte e criatividade", examples: "Massinha, lápis de cor, giz de cera, livros infantis" },
+  { icon: "🐻", title: "Temáticos Masha e o Urso", examples: "Pelúcias, mochila, itens da turma da Masha" },
+];
