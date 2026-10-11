@@ -134,13 +134,9 @@ export const steps = [
 
 export const clients = ["Sanagás", "Construindo o Amanhã", "Novo Millenium"];
 
-export const filterNames = ["Todos", "Branding", "Social Media", "Fotografia", "Web"] as const;
+export const filterNames = ["Todos", "Branding"] as const;
 
 export const work = [
-  { title: "Identidade Sanagás", category: "Branding", slotId: "work-1" },
-  { title: "Feed Construindo o Amanhã", category: "Social Media", slotId: "work-2" },
-  { title: "Ensaio Novo Millenium", category: "Fotografia", slotId: "work-3" },
-  { title: "Site institucional", category: "Web", slotId: "work-4" },
   {
     title: "Manual de marca — Novo Millenium",
     category: "Branding",
@@ -148,7 +144,6 @@ export const work = [
     coverImage: "/images/work/novo-millenium/logo-novo-millenium.png",
     caseStudy: "novo-millenium",
   },
-  { title: "Cobertura de evento", category: "Fotografia", slotId: "work-6" },
   {
     title: "Manual de marca — Claudia",
     category: "Branding",

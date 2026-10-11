@@ -15,7 +15,7 @@ const AMBIENT_STARS = [
 
 export function Services() {
   return (
-    <div className={`section grain ${styles.wrap}`}>
+    <div className={`section grain ${styles.wrap}`} id="servicos">
       <StarField stars={AMBIENT_STARS} />
       <div className={`container ${styles.content}`}>
         <Reveal>

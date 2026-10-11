@@ -1,0 +1,11 @@
+/* Applied only on devices with a fine pointer (see CustomCursor.tsx). */
+html.has-custom-cursor,
+html.has-custom-cursor * {
+  cursor: none !important;
+}
+
+html.has-custom-cursor input,
+html.has-custom-cursor textarea,
+html.has-custom-cursor select {
+  cursor: text !important;
+}
