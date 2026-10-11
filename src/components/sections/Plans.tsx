@@ -57,7 +57,8 @@ export function Plans() {
         </RevealGroup>
         <Reveal>
           <p className={`bodyCopy ${styles.footNote}`}>
-            Precisa de algo diferente? A gente monta um plano sob medida pro seu negócio.
+            Esses planos são só pra gestão de redes. Precisa de site, identidade visual ou
+            fotografia sem entrar num plano mensal? Também dá — é só contratar à parte.
           </p>
         </Reveal>
       </div>

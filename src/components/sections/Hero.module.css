@@ -6,16 +6,22 @@
 .inner {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: var(--space-7);
+  min-height: min(92vh, 760px);
+}
+
+.copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-6);
-  min-height: min(92vh, 760px);
-  justify-content: center;
 }
 
 .headline {
-  font-size: var(--text-display-1);
+  font-size: clamp(44px, 4.8vw, 72px);
   color: var(--white);
   max-width: 820px;
 }
@@ -25,3 +31,15 @@
   max-width: 560px;
 }
 
+.orbitWrap {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    min-height: auto;
+  }
+}

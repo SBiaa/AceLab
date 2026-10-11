@@ -12,7 +12,7 @@ export function PainPoints() {
           <div>
             <p className="eyebrow">o problema</p>
             <h2 className="h-display" style={{ fontSize: "var(--text-h1)" }}>
-              Seu negócio é bom. Sua marca precisa mostrar isso.
+              Isso te soa familiar?
             </h2>
           </div>
         </Reveal>

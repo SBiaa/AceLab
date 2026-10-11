@@ -1,0 +1,403 @@
+.hero {
+  background: linear-gradient(135deg, var(--plum-900) 0%, #240c3f 50%, var(--ink-900) 100%);
+  overflow: hidden;
+}
+.heroInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: var(--space-7);
+  min-height: min(88vh, 720px);
+}
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  align-items: flex-start;
+}
+.heroTitle {
+  font-size: clamp(52px, 6.4vw, 96px);
+  color: var(--white);
+  font-weight: var(--weight-bold);
+}
+.heroTitle em {
+  font-style: italic;
+  color: var(--crimson-300);
+}
+.heroSub {
+  color: var(--plum-100);
+  max-width: 520px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+.center {
+  justify-content: center;
+}
+.heroVisual {
+  display: flex;
+  justify-content: center;
+}
+
+.red {
+  color: var(--crimson-600);
+}
+
+.heading {
+  font-size: var(--text-h1);
+  text-align: center;
+  color: var(--text-strong);
+  font-weight: var(--weight-bold);
+}
+.headingLight {
+  color: var(--white);
+}
+.left {
+  text-align: left;
+}
+
+/* Serviços */
+.services {
+  background: var(--ink-50);
+}
+.cards {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-5);
+}
+.cardItem {
+  width: calc((100% - 3 * var(--space-5)) / 4);
+  min-width: 240px;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  height: 100%;
+  min-height: 340px;
+  padding: var(--space-8) var(--space-5);
+  background: var(--white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  color: var(--plum-900);
+  box-shadow: var(--shadow-md);
+  transition:
+    transform var(--dur-base) var(--ease-standard),
+    box-shadow var(--dur-base) var(--ease-standard);
+}
+.card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: var(--shadow-brand);
+}
+.card.red {
+  color: var(--crimson-600);
+}
+.cardIndex {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-body);
+  font-variant-numeric: lining-nums;
+  font-weight: var(--weight-bold);
+  font-size: 22px;
+  line-height: 1;
+}
+.cardIndexBottom {
+  top: auto;
+  left: auto;
+  right: 16px;
+  bottom: 12px;
+  transform: rotate(180deg);
+}
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+.cardTitle {
+  font-size: var(--text-h4);
+  color: var(--text-strong);
+  font-weight: var(--weight-bold);
+}
+.cardDesc {
+  font-size: var(--text-body-sm);
+  color: var(--text-body);
+  flex: 1;
+}
+.cardCta {
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+}
+
+/* Diferencial */
+.diff {
+  background: #2c0750;
+  overflow: hidden;
+}
+.diffInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-7);
+}
+.diffTitle {
+  color: var(--white);
+  font-size: clamp(36px, 4.4vw, 56px);
+  font-weight: var(--weight-bold);
+}
+.diffText {
+  color: var(--plum-200);
+  max-width: 600px;
+  margin-top: var(--space-4);
+}
+.suitGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+.suitCard {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.suitGlyph {
+  display: block;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--white);
+  margin-bottom: var(--space-3);
+}
+.suitGlyphRed {
+  color: var(--crimson-300);
+}
+.suitTitle {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-bold);
+  color: var(--white);
+  letter-spacing: 0;
+}
+.suitDesc {
+  margin-top: var(--space-2);
+  font-size: var(--text-body-sm);
+  color: var(--plum-200);
+}
+
+/* Portfólio */
+.work {
+  background: var(--ink-900);
+}
+.marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: var(--space-8);
+  padding: var(--space-2) 0 var(--space-4);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.track {
+  display: flex;
+  width: max-content;
+  animation: work-flow 40s linear infinite;
+  will-change: transform;
+}
+.marquee:hover .track,
+.marquee:focus-within .track {
+  animation-play-state: paused;
+}
+.group {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--space-5);
+  padding-right: var(--space-5);
+}
+.slide {
+  position: relative;
+  flex: 0 0 clamp(240px, 22vw, 320px);
+  aspect-ratio: 4 / 5;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.6, 0.2, 1),
+    box-shadow 0.4s ease;
+}
+a.slide:hover,
+a.slide:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+}
+.soon {
+  opacity: 0.8;
+}
+.tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--crimson-600);
+  color: var(--white);
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  font-weight: var(--weight-semibold);
+}
+.overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  padding: var(--space-4);
+  background: linear-gradient(to top, rgba(20, 16, 26, 0.85), transparent);
+  pointer-events: none;
+}
+.workTitle {
+  color: var(--white);
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+}
+.workSub {
+  margin-top: 2px;
+  color: var(--plum-100);
+  font-size: var(--text-caption);
+}
+@keyframes work-flow {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .track {
+    animation: none;
+  }
+}
+
+/* Pra quem é */
+.who {
+  background: var(--white);
+}
+.whoInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+.chips {
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.chip {
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--plum-100);
+  color: var(--plum-900);
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-medium);
+}
+
+/* Sobre */
+.about {
+  background: var(--plum-50);
+}
+.aboutInner {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+.aboutCard {
+  aspect-ratio: 1;
+  max-width: 320px;
+  border-radius: var(--radius-xl);
+  background: var(--surface-brand-gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  box-shadow: var(--shadow-brand);
+}
+
+/* Final */
+.final {
+  background: var(--surface-brand-gradient);
+  overflow: hidden;
+}
+.finalStar {
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  opacity: 0.12;
+}
+.finalInner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+.finalTitle {
+  color: var(--white);
+  font-size: clamp(36px, 4.4vw, 56px);
+  font-weight: var(--weight-bold);
+}
+.finalSub {
+  color: var(--plum-100);
+  max-width: 460px;
+}
+
+@media (max-width: 960px) {
+  .heroInner,
+  .whoInner,
+  .aboutInner {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+    min-height: auto;
+  }
+  .cardItem {
+    width: calc((100% - var(--space-5)) / 2);
+  }
+  .suitGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .cardItem {
+    width: 100%;
+  }
+  .suitGrid {
+    grid-template-columns: 1fr;
+  }
+}

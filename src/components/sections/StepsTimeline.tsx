@@ -18,25 +18,33 @@ const CELEBRATE_AT = 0.88;
 
 const ICONS = [ChatIcon, TargetIcon, LayersIcon, TrophyIcon];
 
+const STAGGER = 0.14;
+
 const nodeVariants: Variants = {
   inactive: {
-    backgroundColor: "var(--surface-page)",
-    borderColor: "var(--border-subtle)",
-    color: "var(--ink-400)",
+    backgroundColor: "#241e2e",
+    borderColor: "rgba(255, 255, 255, 0.16)",
+    color: "#9c95a6",
     scale: 0.88,
+    boxShadow: "0 0 0 0px rgba(196, 48, 60, 0)",
   },
-  active: {
-    backgroundColor: "var(--action-accent)",
-    borderColor: "var(--action-accent)",
-    color: "var(--white)",
+  active: (i: number) => ({
+    backgroundColor: "#ac1e2a",
+    borderColor: "#c4303c",
+    color: "#ffffff",
     scale: 1,
-    transition: { duration: 0.4, ease: [0.2, 0.6, 0.2, 1] },
-  },
+    boxShadow: "0 0 0 8px rgba(196, 48, 60, 0.18)",
+    transition: { duration: 0.4, ease: [0.2, 0.6, 0.2, 1], delay: i * STAGGER },
+  }),
 };
 
 const contentVariants: Variants = {
-  inactive: { opacity: 0, x: 18 },
-  active: { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.2, 0.6, 0.2, 1] } },
+  inactive: { opacity: 0, y: 14 },
+  active: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.2, 0.6, 0.2, 1], delay: i * STAGGER + 0.1 },
+  }),
 };
 
 export function StepsTimeline() {
@@ -46,7 +54,7 @@ export function StepsTimeline() {
   const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 0.75", "end 0.4"],
+    offset: ["start 0.85", "end 0.55"],
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -66,7 +74,13 @@ export function StepsTimeline() {
 
   return (
     <div className={styles.wrap} ref={containerRef}>
-      <div className={styles.track}>
+      <div className={`${styles.track} ${styles.trackH}`}>
+        <motion.div
+          className={styles.trackFill}
+          style={reduceMotion ? undefined : { scaleX: scrollYProgress }}
+        />
+      </div>
+      <div className={`${styles.track} ${styles.trackV}`}>
         <motion.div
           className={styles.trackFill}
           style={reduceMotion ? undefined : { scaleY: scrollYProgress }}
@@ -82,12 +96,18 @@ export function StepsTimeline() {
               className={styles.step}
               initial="inactive"
               whileInView="active"
+              custom={i}
               viewport={{ once: true, amount: 0.6 }}
             >
-              <motion.div className={styles.node} variants={nodeVariants} ref={isLast ? lastNodeRef : undefined}>
+              <motion.div
+                className={styles.node}
+                variants={nodeVariants}
+                custom={i}
+                ref={isLast ? lastNodeRef : undefined}
+              >
                 <Icon width={22} height={22} />
               </motion.div>
-              <motion.div className={styles.content} variants={contentVariants}>
+              <motion.div variants={contentVariants} custom={i}>
                 <p className={styles.stepLabel}>Passo {st.n}</p>
                 <h3 className={styles.title}>{st.title}</h3>
                 <p className={styles.desc}>{st.desc}</p>

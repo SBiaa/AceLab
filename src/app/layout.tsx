@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
+import { CustomCursor } from "@/components/ui/CustomCursor";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -27,7 +28,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" className={`${playfairDisplay.variable} ${dmSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <CustomCursor />
+      </body>
     </html>
   );
 }
