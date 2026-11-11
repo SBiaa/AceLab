@@ -35,11 +35,11 @@ const SERVICES: {
 }[] = [
   { rank: "A", suit: "♠", title: "Identidade visual", desc: "Logo, cores e manual pra sua marca ser lembrada.", cta: "Ver projetos", href: "#jogadas", Icon: PenNibIcon },
   { rank: "K", suit: "♥", title: "Social media", desc: "Conteúdo com estratégia, todo mês, sem você se preocupar.", cta: "Conhecer os planos", href: "/social-media", Icon: InstagramIcon },
-  { rank: "Q", suit: "♦", title: "Tráfego pago", desc: "Anúncios no Instagram e no Google pra trazer cliente de verdade.", cta: "Saiba mais", href: whatsappLink, Icon: TargetDotIcon },
+  { rank: "Q", suit: "♦", title: "Tráfego pago", desc: "Anúncios no Instagram e no Google pra trazer cliente de verdade.", cta: "Saiba mais", href: "/comecar", Icon: TargetDotIcon },
   { rank: "J", suit: "♣", title: "Sites e landing pages", desc: "Páginas rápidas, bonitas e feitas pra vender.", cta: "Ver sites", href: "#jogadas", Icon: MonitorIcon },
   { rank: "10", suit: "♠", title: "Sistemas sob medida", desc: "Agendamento, cadastro, controle e CRM pro seu jeito de trabalhar.", cta: "Ver sistemas", href: "/conecta", Icon: CodeSlashIcon },
   { rank: "9", suit: "♥", title: "Foto e vídeo", desc: "Produtos, ambiente, eventos e reels com cara profissional.", cta: "Ver portfólio", href: "#jogadas", Icon: CameraDotIcon },
-  { rank: "8", suit: "♦", title: "Impressos", desc: "Cartão, panfleto, cardápio, cartaz e fachada.", cta: "Ver kits", href: whatsappLink, Icon: PrinterIcon },
+  { rank: "8", suit: "♦", title: "Impressos", desc: "Cartão, panfleto, cardápio, cartaz e fachada.", cta: "Ver kits", href: "/comecar", Icon: PrinterIcon },
 ];
 
 const WORK: {
@@ -106,8 +106,8 @@ export function NovaHome() {
                   <Button variant="accent" size="lg" href="#cartas">
                     Ver o que a gente faz
                   </Button>
-                  <Button variant="inverse" size="lg" href={whatsappLink}>
-                    Chamar no WhatsApp
+                  <Button variant="inverse" size="lg" href="/comecar">
+                    Pedir um orçamento
                   </Button>
                 </div>
               </Reveal>
@@ -295,7 +295,7 @@ export function NovaHome() {
                 <Button variant="accent" size="lg" href={whatsappLink}>
                   Chamar no WhatsApp
                 </Button>
-                <Button variant="inverse" size="lg" href={whatsappLink}>
+                <Button variant="inverse" size="lg" href="/comecar">
                   Pedir um orçamento
                 </Button>
               </div>

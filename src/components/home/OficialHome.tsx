@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fraunces, Poppins } from "next/font/google";
 import { whatsappLink } from "@/lib/data";
+import { DrawLine, FadeUp, GrowIn, Item, MotionRoot, ScrollSlide, Stagger } from "./ScrollFx";
 import s from "./OficialHome.module.css";
 
 const fraunces = Fraunces({ variable: "--oc-serif", subsets: ["latin"], weight: "600", style: ["normal", "italic"] });
@@ -71,12 +72,12 @@ const SOON = ["Sistema da ONG", "Vídeos da campanha", "As lojas", "O casamento 
 const AUDIENCE = ["Lanchonetes", "Restaurantes", "Barbearias", "Academias", "Comércios locais"];
 
 export function OficialHome() {
-  // As faixas rolam em loop: o conteúdo é repetido para a emenda não aparecer.
-  const bandLight = [...AREAS].reverse().concat([...AREAS].reverse());
-  const bandDark = AREAS.concat(AREAS);
+  // Quatro voltas: sobra texto dos dois lados quando a faixa desliza com o scroll.
+  const bandLight = Array.from({ length: 4 }, () => [...AREAS].reverse()).flat();
+  const bandDark = Array.from({ length: 4 }, () => AREAS).flat();
 
   return (
-    <div className={`${fraunces.variable} ${poppins.variable} ${s.page}`}>
+    <MotionRoot className={`${fraunces.variable} ${poppins.variable} ${s.page}`}>
       {/* Abertura */}
       <header className={s.hero}>
         <Star className={`${s.spin} ${s.heroStar}`} />
@@ -96,26 +97,30 @@ export function OficialHome() {
           </nav>
 
           <div className={s.heroRow}>
-            <div className={s.heroCopy}>
+            <Stagger className={s.heroCopy} stagger={0.12}>
+              <Item>
               <h1 className={`${s.serif} ${s.heroTitle}`}>
                 O ás do seu <em>negócio.</em>
                 <Star fill="#B81435" className={s.titleStar} />
               </h1>
+              </Item>
+              <Item>
               <p className={s.heroSub}>
                 Design, conteúdo, tráfego, foto, site e sistema. Tudo que o seu negócio precisa pra aparecer e vender,
                 num lugar só.
               </p>
-              <div className={s.actions}>
+              </Item>
+              <Item className={s.actions}>
                 <a href="#cartas" className={`${s.btn} ${s.btnP}`}>
                   Ver o que a gente faz
                 </a>
                 <a href={whatsappLink} className={`${s.btn} ${s.btnO}`} target="_blank" rel="noopener noreferrer">
                   Chamar no WhatsApp
                 </a>
-              </div>
-            </div>
+              </Item>
+            </Stagger>
 
-            <div className={s.slotCard}>
+            <FadeUp className={s.slotCard} delay={0.35} y={48}>
               <span className={`${s.tag} ${s.tagPink}`}>serviços</span>
               <div className={`${s.slot} ${s.serif}`}>
                 <ul>
@@ -131,12 +136,13 @@ export function OficialHome() {
                   <div key={d} className={s.bar} style={{ animationDelay: `${d}s` }} />
                 ))}
               </div>
-            </div>
+            </FadeUp>
           </div>
         </div>
 
         <div className={s.bands} aria-hidden="true">
           <div className={`${s.band} ${s.bandLight}`}>
+            <ScrollSlide distance={260}>
             <div className={`${s.marq} ${s.rev} ${s.serif}`}>
               {bandLight.map((a, i) => (
                 <span key={i}>
@@ -144,8 +150,10 @@ export function OficialHome() {
                 </span>
               ))}
             </div>
+            </ScrollSlide>
           </div>
           <div className={`${s.band} ${s.bandDark}`}>
+            <ScrollSlide distance={-260}>
             <div className={`${s.marq} ${s.serif}`}>
               {bandDark.map((a, i) => (
                 <span key={i}>
@@ -153,6 +161,7 @@ export function OficialHome() {
                 </span>
               ))}
             </div>
+            </ScrollSlide>
           </div>
         </div>
       </header>
@@ -162,11 +171,14 @@ export function OficialHome() {
       {/* Serviços */}
       <section id="cartas" className={s.dark}>
         <div className={s.wrap}>
-          <span className={`${s.tag} ${s.tagPink}`}>serviços</span>
-          <h2 className={`${s.serif} ${s.h2}`}>Escolha sua carta.</h2>
-          <div className={s.rows}>
+          <FadeUp>
+            <span className={`${s.tag} ${s.tagPink}`}>serviços</span>
+            <h2 className={`${s.serif} ${s.h2}`}>Escolha sua carta.</h2>
+          </FadeUp>
+          <Stagger className={s.rows} stagger={0.08}>
             {SERVICES.map((svc) => (
-              <Link key={svc.title} href={svc.href} className={s.row}>
+              <Item key={svc.title} kind="left" className={s.rowItem}>
+              <Link href={svc.href} className={s.row}>
                 <span className={`${s.serif} ${s.gl} ${isRed(svc.glyph) ? s.glRed : s.glWhite}`} aria-hidden="true">
                   {svc.glyph}
                 </span>
@@ -174,8 +186,9 @@ export function OficialHome() {
                 <span className={s.rowDesc}>{svc.desc}</span>
                 <span className={s.go}>{svc.cta} →</span>
               </Link>
+              </Item>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
@@ -184,26 +197,28 @@ export function OficialHome() {
       {/* Os naipes */}
       <section className={s.light}>
         <div className={s.wrap}>
-          <div className={s.center}>
+          <FadeUp className={s.center}>
             <span className={`${s.tag} ${s.tagDark}`}>o que a gente faz</span>
             <h2 className={`${s.serif} ${s.h2} ${s.h2Center}`}>O ás de todos os naipes.</h2>
             <p className={s.leadCenter}>
               Contratar alguém só pra isso custa salário, encargos e treinamento. Com a Ace você tem estratégia, design e
               tecnologia trabalhando junto, por uma fração disso.
             </p>
-          </div>
-          <div className={s.suits}>
-            <div className={s.thread} aria-hidden="true" />
+          </FadeUp>
+          <Stagger className={s.suits} stagger={0.15} delay={0.2}>
+            <DrawLine className={s.thread} />
             {SUITS.map((suit) => (
-              <div key={suit.title} className={s.suit}>
+              <Item key={suit.title} className={s.suit}>
+                <Item as="span" kind="pop" className={s.suitGlyphWrap}>
                 <span className={`${s.serif} ${s.suitGlyph} ${isRed(suit.glyph) ? s.suitRed : ""}`} aria-hidden="true">
                   {suit.glyph}
                 </span>
+                </Item>
                 <h3 className={`${s.serif} ${s.suitTitle}`}>{suit.title}</h3>
                 <p className={s.suitDesc}>{suit.desc}</p>
-              </div>
+              </Item>
             ))}
-          </div>
+          </Stagger>
         </div>
       </section>
 
@@ -212,11 +227,14 @@ export function OficialHome() {
       {/* Portfólio */}
       <section id="jogadas" className={s.dark}>
         <div className={s.wrap}>
-          <span className={`${s.tag} ${s.tagPink}`}>portfólio</span>
-          <h2 className={`${s.serif} ${s.h2} ${s.h2Work}`}>Algumas jogadas.</h2>
-          <div className={s.work}>
+          <FadeUp>
+            <span className={`${s.tag} ${s.tagPink}`}>portfólio</span>
+            <h2 className={`${s.serif} ${s.h2} ${s.h2Work}`}>Algumas jogadas.</h2>
+          </FadeUp>
+          <Stagger className={s.work} stagger={0.14}>
             {WORK.map((w) => (
-              <Link key={w.title} href={w.href} className={s.workCard}>
+              <Item key={w.title} className={s.workItem}>
+              <Link href={w.href} className={s.workCard}>
                 <div className={s.workCover} style={{ background: w.bg }}>
                   <Star fill={w.star} size={72} />
                 </div>
@@ -226,15 +244,16 @@ export function OficialHome() {
                   <span className={s.workGo}>Ver projeto →</span>
                 </div>
               </Link>
+              </Item>
             ))}
-          </div>
-          <ul className={s.soon}>
+          </Stagger>
+          <Stagger as="ul" className={s.soon} stagger={0.06}>
             {SOON.map((t) => (
-              <li key={t}>
+              <Item as="li" key={t}>
                 {t} <span className={`${s.tag} ${s.tagPink} ${s.tagXs}`}>em breve</span>
-              </li>
+              </Item>
             ))}
-          </ul>
+          </Stagger>
         </div>
       </section>
 
@@ -244,25 +263,29 @@ export function OficialHome() {
       <section className={`${s.light} ${s.lightTall}`}>
         <div className={s.wrap}>
           <div className={s.who}>
-            <div className={s.whoHead}>
+            <FadeUp className={s.whoHead}>
               <span className={`${s.tag} ${s.tagDark}`}>pra quem é</span>
               <h2 className={`${s.serif} ${s.h2Sm}`}>Do balcão da esquina à empresa grande.</h2>
-            </div>
-            <div className={s.whoBody}>
+            </FadeUp>
+            <FadeUp className={s.whoBody} delay={0.15}>
               <p className={s.lead}>
                 Lanchonetes, restaurantes, barbearias, academias, comércios locais e projetos que precisam de uma marca
                 de gente grande. Na mesa, qualquer um pode ter o ás.
               </p>
-              <ul className={s.chips}>
+              <Stagger as="ul" className={s.chips} stagger={0.07} delay={0.3}>
                 {AUDIENCE.map((a) => (
-                  <li key={a}>{a}</li>
+                  <Item as="li" kind="pop" key={a}>
+                    {a}
+                  </Item>
                 ))}
-                <li className={s.chipDark}>Marcas de gente grande</li>
-              </ul>
-            </div>
+                <Item as="li" kind="pop" className={s.chipDark}>
+                  Marcas de gente grande
+                </Item>
+              </Stagger>
+            </FadeUp>
           </div>
 
-          <div className={s.about}>
+          <GrowIn className={s.about}>
             <div className={s.aboutPhoto}>
               <Star fill="#F66F8A" size={60} />
               <span>[FOTO DA BIA]</span>
@@ -275,7 +298,7 @@ export function OficialHome() {
                 negócio também pode ter marca, estratégia e resultado.
               </p>
             </div>
-          </div>
+          </GrowIn>
         </div>
       </section>
 
@@ -284,7 +307,7 @@ export function OficialHome() {
       {/* Chamada final + rodapé */}
       <section className={s.final}>
         <Star className={`${s.spin} ${s.finalStar}`} />
-        <div className={`${s.wrap} ${s.center}`}>
+        <FadeUp className={`${s.wrap} ${s.center}`} y={48}>
           <h2 className={`${s.serif} ${s.finalTitle}`}>
             Tem um projeto? Bora pra <em>mesa.</em>
           </h2>
@@ -297,7 +320,7 @@ export function OficialHome() {
               Pedir um orçamento
             </Link>
           </div>
-        </div>
+        </FadeUp>
 
         <footer className={s.foot}>
           <div className={`${s.wrap} ${s.footInner}`}>
@@ -314,6 +337,6 @@ export function OficialHome() {
           </div>
         </footer>
       </section>
-    </div>
+    </MotionRoot>
   );
 }
